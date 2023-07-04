@@ -107,4 +107,54 @@ class CwCDataset(Dataset):
 			if self.add_augmented_data:
 				samples_split = {'orig': [], 'aug': []}
 				for sample in self.samples:
-					samples_split['orig'].append(sample) if not sample.get('from_aug_data') else samples_split['
+					samples_split['orig'].append(sample) if not sample.get('from_aug_data') else samples_split['aug'].append(sample)
+				print('\nOriginal dataset contains', len(samples_split['orig']), 'original samples and', len(samples_split['aug']), 'augmented samples ('+str(len(samples_split['orig'])+len(samples_split['aug'])), 'total samples).')
+
+				augmented_data_fractions = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9]
+				augmented_data_fractions = list(map(lambda x: x/2, augmented_data_fractions))
+				mixed_data_size = ["2x", "4x", "6x", "8x", "10x", "12x", "14x", "16x", "18x", "20x"]
+				num_aug_samples_per_orig = list(range(1, 20, 2))
+
+				frac2size = dict(zip(augmented_data_fractions, mixed_data_size))
+				frac2data = {}
+
+				if self.aug_sampling_strict:
+					grouped_aug_samples, _ = group_samples_by_id(samples_split['aug'])
+
+				for frac, num_samples in zip(augmented_data_fractions, num_aug_samples_per_orig):
+					if not self.aug_sampling_strict:
+						print('Filtering augmented samples with a fraction of', frac, '...')
+						chosen_aug_samples = list(np.random.choice(samples_split['aug'], int(frac*len(samples_split['aug'])), replace=False))
+					else:
+						print('Filtering augmented samples per group with a num_samples of', num_samples, '...')
+						chosen_aug_samples = sample_strictly(grouped_aug_samples, num_samples)
+
+					print('Randomly sampled', len(chosen_aug_samples), 'augmented samples from the full augmented set.')
+
+					mixed_samples = samples_split['orig'] + chosen_aug_samples
+					frac2data[frac] = mixed_samples
+
+			print("Current dataset size", len(self.samples))
+			print("Done! Loaded vanilla dataset of size", len(self.samples))
+
+			if dump_dataset:
+				if self.add_augmented_data:
+					for frac, data in frac2data.items():
+						# FIXME: Resuse code
+						# Generate semi-unique file path based on inputs
+						aug_frac_str = "-" + frac2size[frac]
+						dataset_dir = lower_str + pers_str + aug_str + aug_frac_str
+						dataset_dir = os.path.join(cwc_datasets_path, dataset_dir)
+
+						if not os.path.exists(dataset_dir):
+							os.makedirs(dataset_dir)
+
+						print("Saving dataset ...\n")
+
+						print("Saving self.jsons ...") # NOTE: These are ALL vanilla + aug jsons -- does not correspond to the ones used in samples only
+						save_pkl_data(dataset_dir + "/"+ self.split + "-jsons.pkl", self.jsons)
+
+						print("Saving self.samples ...")
+						save_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl", data)
+
+						print(
