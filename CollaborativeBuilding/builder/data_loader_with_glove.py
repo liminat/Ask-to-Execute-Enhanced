@@ -157,4 +157,75 @@ class CwCDataset(Dataset):
 						print("Saving self.samples ...")
 						save_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl", data)
 
-						print(
+						print("\nSaving git commit hashes ...\n")
+						write_commit_hashes("..", dataset_dir, filepath_modifier="_" + self.split)
+
+						# write which aug dir used
+						with open(os.path.join(dataset_dir, "aug_data_dir.txt"), 'w') as f:
+							f.write(os.path.abspath(aug_data_dir))
+
+				else:
+					# Generate semi-unique file path based on inputs
+					dataset_dir = lower_str + pers_str + aug_str
+					dataset_dir = os.path.join(cwc_datasets_path, dataset_dir)
+
+					if not os.path.exists(dataset_dir):
+						os.makedirs(dataset_dir)
+
+					print("Saving dataset ...\n")
+
+					print("Saving self.jsons ...")
+					save_pkl_data(dataset_dir + "/"+ self.split + "-jsons.pkl", self.jsons)
+
+					print("Saving self.samples ...")
+					save_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl", self.samples)
+
+		self.augmentation_factor = 0
+
+	def get_sample(self, idx):
+		""" Returns one data sample (utterance) in tokenized form. """
+		return self.samples[idx]
+
+	def process_samples(self, lower, compute_diff=True, compute_perspective=True):
+		""" Preprocesses the input JSONs and generates a list of data samples. """
+		samples = []
+
+		try:
+			for j in tqdm.tqdm(range(len(self.jsons))):
+				## This is to preprocess each dialogue example, len(train_jsons),len(val_jsons),len(test_jsons) = (281, 101, 137)
+
+				try:
+					js = self.jsons[j]
+
+					if js["from_aug_data"]:
+						orig_log_dir = re.sub(r"_\d+", "", js["log_dir"])
+					else:
+						orig_log_dir = js["log_dir"]
+
+					# print(js["logfile_path"] + "\n")
+					world_states = js["WorldStates"]
+					# print(world_states[0])
+					# sys.exit(0)
+					final_observation = world_states[-1]
+					gold_config = js["gold_config_structure"]
+
+					last_world_state = None
+					chat_history = []
+					chat_with_actions_history = []
+
+					for i in range(1, len(world_states)):
+						if i > 1:
+							action_history = world_states[i - 1]["ActionHistory"]
+						else:
+							action_history = []
+						observation = world_states[i]
+						observation["ActionHistory"] = action_history
+						built_config = get_built_config(observation)
+						builder_position = get_builder_position(observation)
+						prev_builder_position = get_builder_position(world_states[i-1])
+						last_action = None
+
+						for k, curr_world_state in enumerate(reversed(world_states[:i+1])):
+							original_index = i-k
+
+							# compare blocks with its prev wo
