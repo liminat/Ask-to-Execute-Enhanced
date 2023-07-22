@@ -261,4 +261,70 @@ class CwCDataset(Dataset):
 							if len(observation["ChatHistory"]) > len(last_world_state["ChatHistory"]):
 								for i3 in range(len(last_world_state["ChatHistory"]), len(observation["ChatHistory"])):
 									chat_history.append(observation["ChatHistory"][i3].strip())
-									chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i3].strip(), "built_config": built_config, "prev_conf
+									chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i3].strip(), "built_config": built_config, "prev_config": prev_config, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
+
+						last_world_state = observation
+
+					# process dialogue line-by-line
+
+					assert observation["ActionHistory"] == []
+
+					for i in range(len(chat_with_actions_history)):
+						elem = chat_with_actions_history[i]
+						weight = None
+						if elem['action'] != 'chat':
+							if elem['action'] == "putdown":
+								weight = 1
+							if elem['action'] == "pickup":
+								weight = 0
+
+							next_builder_action = BuilderAction(elem["x"], elem["y"], elem["z"], elem["type"], elem["action"], weight)
+							#pp.PrettyPrinter(indent=4).pprint(next_builder_action.weight)
+							observation["ActionHistory"].append(next_builder_action)
+
+						if elem['action'] == 'chat':
+							continue
+
+						def get_all_next_actions(start_index):
+							all_next_actions = []
+							# slicing below to create copies and avoid effects of mutation as observation["ActionHistory"] is updated
+							action_history = observation["ActionHistory"][:-1]
+
+							for zzz in range(start_index, len(chat_with_actions_history)):
+								next_elem = chat_with_actions_history[zzz]
+								if next_elem['action'] == 'chat':
+									break
+								else:
+									weight = None
+									all_next_actions.append(
+										BuilderActionExample(
+											action = BuilderAction(next_elem["x"], next_elem["y"], next_elem["z"], next_elem["type"], next_elem["action"], weight),
+											built_config = next_elem["built_config"],
+											prev_config = next_elem["prev_config"] if next_elem["prev_config"] else [],
+											action_history = action_history
+										)
+									)
+									action_history = action_history + [(
+										BuilderAction(next_elem["x"], next_elem["y"], next_elem["z"], next_elem["type"], next_elem["action"], weight)
+									)] # NOTE: concatenation to avoid mutation
+
+							return all_next_actions
+
+						if i > 0:
+							prev_elem = chat_with_actions_history[i-1]
+							if not prev_elem['action'] == 'chat':
+								continue
+
+						all_next_actions = get_all_next_actions(i)
+
+						idx = elem['idx']
+						built_config = elem["built_config"]
+						prev_config = elem["prev_config"]
+						prev_builder_position = elem["prev_builder_position"]
+
+						def valid_config(config):
+							if not config:
+								return True
+
+							for block in config:
+		
