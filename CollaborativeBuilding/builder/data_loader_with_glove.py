@@ -459,4 +459,60 @@ def discretize_yaw(yaw):
     else:
         return -90
 
-def remove_emp
+def remove_empty_states(observations):
+    observations["WorldStates"] = list(filter(lambda x: x["BuilderPosition"] != None, observations["WorldStates"]))
+    return observations
+
+def reorder(observations):
+    """
+    Returns the observations dict by reordering blocks temporally in every state
+    """
+    for i, state in enumerate(observations["WorldStates"]):
+        prev_blocks = [] if i == 0 else observations["WorldStates"][i-1]["BlocksInGrid"]
+        # pp.PrettyPrinter(indent=4).pprint(state)
+        curr_blocks = state["BlocksInGrid"]
+        curr_blocks_reordered = reorder_blocks(curr_blocks, prev_blocks) # obtain temporal ordering of blocks
+        observations["WorldStates"][i]["BlocksInGrid"] = curr_blocks_reordered # mutate - will be used in next iteration
+
+    return observations
+
+def reorder_blocks(curr_blocks, prev_blocks):
+    """
+    Returns a sorted version of the list of current blocks based on their order in the list of previous blocks.
+    The assumption is that previous blocks are already sorted temporally.
+    So this preserves that order for those blocks and puts any newly placed ones at the very end.
+    """
+    return sorted(curr_blocks, key = lambda x: index(x, prev_blocks))
+
+def index(curr_block, prev_blocks):
+    """
+    Returns position of current block in the list of previous blocks.
+    If not found in the list, returns a very large number (meaning it's a newly placed block and should be placed at the end when sorting temporally).
+    """
+    for i, prev_block in enumerate(prev_blocks):
+        if are_equal(curr_block, prev_block):
+            return i
+
+    return 999
+
+def are_equal(block_1, block_2):
+    """
+    Returns a comparison result between 2 blocks by ignoring the ever changing perspective coordinates
+    """
+    return reformat(block_1) == reformat(block_2)
+
+def get_last_action(curr_blocks, prev_blocks):
+    curr_blocks = list(map(reformat, curr_blocks))
+    prev_blocks = list(map(reformat, prev_blocks))
+
+    diff_dict = diff(gold_config = curr_blocks, built_config = prev_blocks)
+
+    diff_dict["gold_minus_built"] = sorted(diff_dict["gold_minus_built"], key=itemgetter('x', 'y', 'z', 'type'))
+    diff_dict["built_minus_gold"] = sorted(diff_dict["built_minus_gold"], key=itemgetter('x', 'y', 'z', 'type'))
+
+    all_actions = diff_dict["gold_minus_built"] + diff_dict["built_minus_gold"]
+
+    return all_actions[0] if all_actions else None
+
+
+if __name_
