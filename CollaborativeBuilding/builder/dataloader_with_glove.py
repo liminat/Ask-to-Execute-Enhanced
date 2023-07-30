@@ -69,4 +69,55 @@ class BuilderDataset(Dataset):
         else:
             return len(self.items)
 
-    def __
+    def __getitem__(self, idx):
+        return self.items[idx]
+
+    def preprocess(self, idx):
+        """ Computes the tensor representations of a sample """
+        orig_sample = self.samples[idx]
+
+        all_actions = orig_sample["next_builder_actions"]
+        perspective_coords = orig_sample["perspective_coordinates"]
+
+        initial_prev_config_raw = all_actions[0].prev_config
+        initial_action_history_raw = all_actions[0].action_history
+        end_built_config_raw = all_actions[-1].built_config
+
+        all_actions_reprs = list(map(lambda x: self.get_repr(x, perspective_coords), all_actions))
+        all_grid_repr_inputs = list(map(lambda x: x[0], all_actions_reprs))
+        all_outputs = list(map(lambda x: x[1], all_actions_reprs))
+        all_location_mask = list(map(lambda x: x[2], all_actions_reprs))
+
+        all_actions_repr_inputs = list(map(f2, all_actions))
+
+        start_action_repr = torch.Tensor([0] * 11)
+        
+        stop_action = BuilderActionExample(
+            action = None,
+            built_config = all_actions[-1].built_config,
+            prev_config = all_actions[-1].built_config,
+            action_history = all_actions[-1].action_history + [all_actions[-1].action]
+        )
+        stop_action_repr = self.get_repr(stop_action, perspective_coords)
+        stop_action_grid_repr_input = stop_action_repr[0]
+        stop_action_output_label = stop_action_repr[1]
+        stop_action_location_mask = stop_action_repr[2]
+
+        dec_inputs_1 = all_grid_repr_inputs + [stop_action_grid_repr_input]
+        dec_inputs_2 = [start_action_repr] + all_actions_repr_inputs
+        location_mask = all_location_mask + [stop_action_location_mask]
+
+        dec_outputs = all_outputs + [stop_action_output_label]
+        
+        # Encoder inputs
+        utterances_to_add = []
+
+        '''
+        an example of orig_sample["prev_utterances"]:
+        
+        [{'speaker': 'Builder', 'utterance': ['<dialogue>']}, 
+        {'speaker': 'Builder', 'utterance': ['Mission has started.']}, 
+        {'speaker': 'Builder', 'utterance': ['hi']}, 
+        {'speaker': 'Architect', 'utterance': ["hello, it looks like we are building a cube where the sides are made of the letters 'a', 'b', 'c', 'd'"]}, 
+        {'speaker': 'Builder', 'utterance': ['sounds cool']}, 
+        {'speaker': 'Architect', 'utterance': ['First, we will need
