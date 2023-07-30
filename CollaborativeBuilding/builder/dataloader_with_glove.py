@@ -180,4 +180,57 @@ class BuilderDataset(Dataset):
             torch.stack(dec_inputs_2), ## torch.Size([action, 11])
             torch.Tensor(dec_outputs), ## torch.Size([action])
             torch.Tensor(location_mask), ## torch.Size([action, 1089])
-            RawInputs(initial_pr
+            RawInputs(initial_prev_config_raw, initial_action_history_raw, end_built_config_raw, perspective_coords)
+        )
+
+    def get_repr(self, builder_action, perspective_coords):
+        config = builder_action.prev_config
+        for block in config:
+            for key in ['x', 'y', 'z']:
+                block[key] = int(block[key])
+
+        cell_samples = split_orig_sample(builder_action)
+
+        cell_repr_size = 6
+        if self.include_empty_channel:
+            cell_repr_size += 1
+        if self.add_action_history_weight and self.concatenate_action_history_weight:
+            cell_repr_size += 1
+
+        cell_samples_reprs_4d = torch.zeros([cell_repr_size, 11, 9, 11]) 
+        cell_samples_labels = []
+
+        for sample in cell_samples:
+            cell = Region(
+                x_min = sample["x"], x_max = sample["x"], y_min = sample["y"], y_max = sample["y"], z_min = sample["z"], z_max = sample["z"]
+            )
+
+            def get_current_state(cell, built_config):
+                current_state = "empty"
+
+                for block in built_config:
+                    if cell.x_min == block["x"] and cell.y_min == block["y"] and cell.z_min == block["z"]:
+                        current_state = block["type"]
+                        break
+
+                return current_state
+            current_state = get_current_state(cell, sample["built_config"]) 
+
+            def get_action_history_weight(cell, action_history):
+                if self.add_action_history_weight:
+                    action_history_weight = 0.0
+
+                    for i in range(len(action_history) - 1, -1, -1):
+                        action = action_history[i]
+                        if cell.x_min == action.block["x"] and cell.y_min == action.block["y"] and cell.z_min == action.block["z"]:
+                            if self.action_history_weighting_scheme == "smooth":
+                                action_history_weight = (i + 1)/len(action_history)
+                            elif self.action_history_weighting_scheme == "step":
+                                action_history_weight = i - (len(action_history) - 1) + 5
+                                action_history_weight = np.maximum(action_history_weight, 0.0)
+                            break
+                else:
+                    action_history_weight = None
+
+                return action_history_weight
+            action_history_we
