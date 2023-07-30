@@ -120,4 +120,64 @@ class BuilderDataset(Dataset):
         {'speaker': 'Builder', 'utterance': ['hi']}, 
         {'speaker': 'Architect', 'utterance': ["hello, it looks like we are building a cube where the sides are made of the letters 'a', 'b', 'c', 'd'"]}, 
         {'speaker': 'Builder', 'utterance': ['sounds cool']}, 
-        {'speaker': 'Architect', 'utterance': ['First, we will need
+        {'speaker': 'Architect', 'utterance': ['First, we will need to make a red A, make a 3 block long red bar somewhere near the middle']}]
+        '''
+ 
+        i = 0
+        utterances_idx = len(orig_sample["prev_utterances"])-1
+        while i < self.num_prev_utterances: 
+            if utterances_idx < 0:
+                break
+
+            prev = orig_sample["prev_utterances"][utterances_idx]
+            speaker = prev["speaker"]
+            utterance = prev["utterance"]
+
+            if "<builder_" in utterance[0]:
+                if self.use_builder_actions:
+                    utterances_to_add.insert(0, prev)
+                i -= 1
+            elif "mission has started ." in " ".join(utterance) and 'Builder' in speaker:
+                i -= 1 
+
+            else:
+                utterances_to_add.insert(0, prev)
+
+            utterances_idx -= 1
+            i += 1
+
+        prev_utterances = []
+
+        for prev in utterances_to_add:
+            speaker = prev["speaker"]
+            utterance = prev["utterance"]
+
+            if "<dialogue>" in utterance[0]:
+                prev_utterances.append(self.encoder_vocab('<dialogue>'))
+
+            elif "<builder_" in utterance[0]:
+                if self.use_builder_actions:
+                    prev_utterances.append(self.encoder_vocab(utterance[0]))
+
+            else:
+                start_token = self.encoder_vocab('<architect>') if 'Architect' in speaker else self.encoder_vocab('<builder>')
+                end_token = self.encoder_vocab('</architect>') if 'Architect' in speaker else self.encoder_vocab('</builder>')
+                prev_utterances.append(start_token)
+                prev_utterances.extend(self.encoder_vocab(token) for token in utterance)
+                prev_utterances.append(end_token)  
+        
+        if len(prev_utterances) > self.max_length:
+            prev_utterances = prev_utterances[-100:]
+
+        while len(prev_utterances) < self.max_length:
+            prev_utterances.append(self.encoder_vocab.word2idx['<pad>'])
+
+        assert len(prev_utterances) == 100
+        
+        return (
+            torch.Tensor(prev_utterances),
+            torch.stack(dec_inputs_1), ## torch.Size([action, 8, 11, 9, 11])
+            torch.stack(dec_inputs_2), ## torch.Size([action, 11])
+            torch.Tensor(dec_outputs), ## torch.Size([action])
+            torch.Tensor(location_mask), ## torch.Size([action, 1089])
+            RawInputs(initial_pr
