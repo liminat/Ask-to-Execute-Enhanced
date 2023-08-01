@@ -293,4 +293,61 @@ class BuilderDataset(Dataset):
 
         action_cell_index = None
         action_cell_label = None
-        for i, label in enum
+        for i, label in enumerate(cell_samples_labels):
+            if label < 7:
+                action_cell_index = i
+                action_cell_label = label
+                break
+
+        if action_cell_label != None:
+            output_label = action_cell_index * 7 + action_cell_label # act
+        else:
+            # stop
+            assert builder_action.is_stop_token()
+            output_label = stop_action_label
+
+        if self.add_perspective_coords: 
+            cell_samples_reprs_4d = torch.cat([cell_samples_reprs_4d, perspective_coords/10], dim=0) ## (8, 11, 9, 11) cat (3, 11, 9, 11)
+            print('cell_samples_reprs_4d', cell_samples_reprs_4d.shape)
+            print('perspective_coords', perspective_coords.shape)
+                
+        if not builder_action.is_stop_token(): 
+            location_label = action_cell_index
+            action_type_label = action2id[builder_action.action.action_type]
+            color_label = color2id[builder_action.action.block['type']]
+            x = builder_action.action.block['x']
+            y = builder_action.action.block['y']
+            z = builder_action.action.block['z']
+            label = [location_label, action_type_label, color_label, x, y, z, output_label]
+        else:
+            label = [1089, len(action2id), len(color2id), -1, -1, -1, output_label]
+
+        return (
+            cell_samples_reprs_4d,
+            label,
+            location_mask
+        )
+
+    def collate_fn(self, data):
+        prev_utterances, dec_inputs_1, dec_inputs_2, dec_outputs, raw_inputs = zip(*data)
+
+        def merge_text(sequences):
+            lengths = [len(seq) for seq in sequences]
+            padded_seqs = torch.zeros(len(sequences), max(lengths)).long()
+            for i, seq in enumerate(sequences):
+                end = lengths[i]
+                padded_seqs[i, :end] = seq[:end]
+            return padded_seqs, lengths
+
+        prev_utterances, prev_utterances_lengths = merge_text(prev_utterances)
+        dec_inputs_1 = torch.stack(dec_inputs_1) ## stack list of batches to an array
+        dec_inputs_2 = torch.stack(dec_inputs_2)
+        dec_outputs = torch.stack(dec_outputs)
+
+        return (
+            EncoderInputs(prev_utterances, prev_utterances_lengths),
+            dec_inputs_1,
+            dec_inputs_2,
+            dec_outputs,
+            raw_inputs[0]
+       
