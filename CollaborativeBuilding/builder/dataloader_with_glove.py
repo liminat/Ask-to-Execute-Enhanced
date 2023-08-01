@@ -350,4 +350,55 @@ class BuilderDataset(Dataset):
             dec_inputs_2,
             dec_outputs,
             raw_inputs[0]
-       
+        )
+
+class EncoderInputs:
+    def __init__(self, prev_utterances, prev_utterances_lengths):
+        self.prev_utterances = prev_utterances # previous utterances
+        self.prev_utterances_lengths = prev_utterances_lengths
+
+class RawInputs:
+    def __init__(self, initial_prev_config_raw, initial_action_history_raw, end_built_config_raw, perspective_coords):
+        self.initial_prev_config_raw = initial_prev_config_raw
+        self.initial_action_history_raw = initial_action_history_raw
+        self.end_built_config_raw = end_built_config_raw
+        self.perspective_coords = perspective_coords
+
+def split_orig_sample(action):
+
+    builder_action = action.action # None if stop action
+    new_samples = []
+
+    for x in range(x_min, x_max + 1):
+        for y in range(y_min, y_max + 1):
+            for z in range(z_min, z_max + 1):
+                new_sample = {
+                    "x": x,
+                    "y": y,
+                    "z": z
+                }
+
+                if isinstance(builder_action, BuilderAction) and builder_action.block["x"] == x and builder_action.block["y"] == y and builder_action.block["z"] == z:
+                    new_sample["action_type"] = builder_action.action_type # placement or removal
+                    new_sample["block_type"] = builder_action.block["type"] 
+                else:
+                    new_sample["action_type"] = None
+                    new_sample["block_type"] = None
+
+                new_samples.append(new_sample)
+
+    # copy over other stuff
+    for new_sample in new_samples:
+        new_sample["built_config"] = action.prev_config 
+        new_sample["builder_action_history"] = action.action_history
+
+    return new_samples
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--json_data_dir', type=str, default="../builder_data_with_glove") 
+    parser.add_argument('--split', default='train', help='dataset split')
+    parser.add_argument('--load_items', default=False, help='load items/item batches')
+    parser.add_argument('--max_length', type=int, default=100, help='max_length to be padded')
+    parser.add_argument("--include_empty_channel", default=True, action="store_true", help="Whether to add an empty channel in input repr")
+    parser.add_argument("--add_action
