@@ -233,4 +233,64 @@ class BuilderDataset(Dataset):
                     action_history_weight = None
 
                 return action_history_weight
-            action_history_we
+            action_history_weight = get_action_history_weight(cell, sample["builder_action_history"])
+
+            # output label
+            if sample["action_type"] == "placement":
+                output_label = type2id[sample["block_type"]]
+            elif sample["action_type"] == "removal":
+                output_label = len(type2id)
+            else: 
+                output_label = len(type2id) + 1
+
+            # convert data to tensors
+            def f(current_cell_state):
+                if current_cell_state in type2id:
+                    index = type2id[current_cell_state]
+                else:
+                    if self.include_empty_channel:
+                        index = len(type2id) # 6
+                    else:
+                        index = None
+
+                if self.include_empty_channel:
+                    vec_length = len(type2id) + 1
+                else:
+                    vec_length = len(type2id)
+
+                one_hot_vec = [0] * vec_length
+                if index != None:
+                    one_hot_vec[index] = 1
+
+                return one_hot_vec
+
+            current_cell_state_one_hot_vec = f(current_state)
+
+            action_history_weight_vec = [action_history_weight]
+
+            def get_joint_repr(vec1, vec2):
+                if not vec2 == [None]:
+                    # get joint repr for a region
+                    if self.concatenate_action_history_weight:
+                        # concatenate
+                        new_vec = vec1 + vec2
+                    else:
+                        # find the 1.0 in vec1 if any and replace it by vec2[0] if latter is >= 1.0
+                        new_vec = list(map(
+                            lambda x: x if x == 0 or (x == 1 and vec2[0] == 0) else vec2[0],
+                            vec1
+                        ))
+
+                    return new_vec
+                else:
+                    return vec1
+            repr_vec = get_joint_repr(current_cell_state_one_hot_vec, action_history_weight_vec) ## list
+
+            cell_samples_reprs_4d[:, sample["x"]+5, sample["y"]-1, sample["z"]+5] = torch.Tensor(repr_vec) # offsets needed to map to range [0, something]
+            cell_samples_labels.append(output_label)
+        
+        location_mask = get_feasibile_location(sample["built_config"])
+
+        action_cell_index = None
+        action_cell_label = None
+        for i, label in enum
