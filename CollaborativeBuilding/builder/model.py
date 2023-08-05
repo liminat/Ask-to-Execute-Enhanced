@@ -119,4 +119,48 @@ class ActionDecoder(nn.Module):
         self.text_attn_heads = config['text_attn_heads']
         self.text_layers = config['text_layers']
 
-        self.world_hidden_size = c
+        self.world_hidden_size = config['world_hidden_size']
+        self.world_dropout = config['world_dropout']
+        self.world_attn_heads = config['world_attn_heads']
+        self.world_layers = config['world_layers']
+
+        self.cell_state_size = config['cell_state_size']
+        self.action_type_size = config['action_type_size']
+        
+        self.text_cross_attn = nn.ModuleList([CrossattLayer(self.text_hidden_size, self.text_attn_heads, self.text_dropout, self.world_hidden_size+11) for _ in range(self.text_layers)])
+        self.text_self_attn = nn.ModuleList([SelfattLayer(self.text_hidden_size, self.text_attn_heads, self.text_dropout) for _ in range(self.text_layers+1)])
+
+        self.world_encoder = WorldStateEncoderCNN(config)
+        self.world_cross_attn = nn.ModuleList([CrossattLayer(self.world_hidden_size+11, self.world_attn_heads, self.world_dropout, self.text_hidden_size) for _ in range(self.world_layers)])
+        self.world_self_attn = nn.ModuleList([SelfattLayer(self.world_hidden_size+11, self.world_attn_heads, self.world_dropout) for _ in range(self.world_layers+1)])
+        
+        self.location_gru = nn.GRU(input_size=11, hidden_size=1089, num_layers=1, batch_first=True)
+        self.location_module = nn.Linear(self.world_hidden_size+11, 1)
+        self.color_module = nn.Linear(self.text_hidden_size, 6)
+        self.action_type_module = nn.Linear(self.text_hidden_size, self.action_type_size)
+
+        self.CELoss = nn.CrossEntropyLoss()
+
+    def forward(self, utter_vec, world_repr, last_action, label, location_mask=None, raw_input=None, dataset=None):
+        """
+        utter_vec: [batch_size, seq_len, hidden_size]
+        world_repr: [batch_size, action_length, 8, 11, 9, 11]
+        last_action: [batch_size, action_len, 11]
+        label: [batch_size, action_len, 7], where last dim is [location_label, action_type_label, color_label, x, y, z, output_label]
+        """
+
+        total_location_loss = 0
+        total_action_type_loss = 0
+        total_color_loss = 0
+
+        total_color = 0
+        total_location = 0
+        total_color_correct = 0
+        total_location_correct = 0
+        total_action_type_correct = 0
+
+        if not self.training:
+            batch_size, action_len, _ = label.shape
+            predicted_seq = []
+            for k in range(action_len):
+                location_label, action_type_label, color_label = la
