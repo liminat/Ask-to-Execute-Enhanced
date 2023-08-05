@@ -401,4 +401,25 @@ if __name__ == '__main__':
     parser.add_argument('--load_items', default=False, help='load items/item batches')
     parser.add_argument('--max_length', type=int, default=100, help='max_length to be padded')
     parser.add_argument("--include_empty_channel", default=True, action="store_true", help="Whether to add an empty channel in input repr")
-    parser.add_argument("--add_action
+    parser.add_argument("--add_action_history_weight", default=True, action="store_true", help="Whether to add an extra bit for action history weights in input repr")
+    parser.add_argument('--action_history_weighting_scheme', type=str, default="step", help='type of action weighting scheme to use')
+    parser.add_argument("--concatenate_action_history_weight", default=True, action="store_true", help="Whether to concatenate or incorporate into the vector representing the current block in a neighborhood cell")
+    parser.add_argument('--num_prev_utterances', type=int, default=6, help='number of previous utterances to use as input')
+    parser.add_argument('--use_builder_actions', default=False, help='include builder action tokens in the dialogue history')
+    parser.add_argument('--add_perspective_coords', default=False, action='store_true', help='whether or not to include perspective coords in world state repr')
+    parser.add_argument('--encoder_vocab_path', type=str, default='../../data/vocabulary/glove.42B.300d-lower-1r-speaker-oov_as_unk-all_splits/vocab.pkl', help='path for encoder vocabulary wrapper')
+
+    args = parser.parse_args()
+
+    with open(args.encoder_vocab_path, 'rb') as f:
+        encoder_vocab = pickle.load(f)
+
+    dataset = BuilderDataset(args, args.split, encoder_vocab=encoder_vocab)
+
+
+
+
+
+
+
+
