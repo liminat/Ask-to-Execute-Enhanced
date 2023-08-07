@@ -163,4 +163,33 @@ class ActionDecoder(nn.Module):
             batch_size, action_len, _ = label.shape
             predicted_seq = []
             for k in range(action_len):
-                location_label, action_type_label, color_label = la
+                location_label, action_type_label, color_label = label[:,k,0], label[:,k,1], label[:,k,2] # [batch_size]
+                location_logits, action_type_logits, color_logits = self._get_logits(utter_vec, world_repr[:,k], last_action[:,k], location_mask[:,k])
+                location_loss, action_type_loss, color_loss = self.compute_valid_loss(location_logits, action_type_logits, color_logits, location_label, action_type_label, color_label, self.CELoss)
+                location_pred, action_type_pred, color_pred = torch.argmax(location_logits, dim=-1), torch.argmax(action_type_logits, dim=-1), torch.argmax(color_logits, dim=-1)
+                
+                total_location_loss += location_loss
+                total_action_type_loss += action_type_loss
+                total_color_loss += color_loss
+
+                total_action_type_correct += sum(action_type_pred==action_type_label)
+                total_location += sum(action_type_label < 2)
+                total_location_correct += sum(location_pred[action_type_label < 2] == location_label[action_type_label < 2])
+                total_color += sum(action_type_label == 0)
+                total_color_correct += sum(color_pred[action_type_label == 0] == color_label[action_type_label == 0])
+
+                predicted_seq.append([location_pred, action_type_pred, color_pred])
+                if action_type_pred >= 2: break
+            return (total_location_loss, total_action_type_loss, total_color_loss), (total_action_type_correct, total_location, total_location_correct, total_color, total_color_correct), predicted_seq
+        else:
+            location_label, action_type_label, color_label = label[:,0], label[:,1], label[:,2] 
+            location_logits, action_type_logits, color_logits = self._get_logits(utter_vec, world_repr, last_action, location_mask)
+            location_loss, action_type_loss, color_loss = self.compute_loss(location_logits, action_type_logits, color_logits, location_label, action_type_label, color_label, self.CELoss)
+            location_pred, action_type_pred, color_pred = torch.argmax(location_logits, dim=-1), torch.argmax(action_type_logits, dim=-1), torch.argmax(color_logits, dim=-1)
+                
+            total_location_loss += location_loss.sum()
+            total_action_type_loss += action_type_loss.sum()
+            total_color_loss += color_loss.sum()
+            
+            total_action_type_correct += sum(action_type_pred==action_type_label)
+            total_location 
