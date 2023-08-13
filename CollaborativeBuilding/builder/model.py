@@ -270,4 +270,53 @@ class SelfattLayer(nn.Module):
     def forward(self, input_tensor, attention_mask=None):
         # Self attention attends to itself, thus keys and querys are the same (input_tensor).
         self_output = self.self_attn(input_tensor, input_tensor, attention_mask)
-        attent
+        attention_output = self.ffn(self_output, input_tensor)
+        return attention_output
+
+
+class CrossattLayer(nn.Module):
+    def __init__(self, hidden_size, num_attention_heads, attention_probs_dropout_prob=0.1, ctx_dim=None, hidden_dropout_prob=0.1):
+        super().__init__()
+        self.cross_attn = Attention(hidden_size, num_attention_heads, attention_probs_dropout_prob, ctx_dim)
+        self.ffn = FeedForwardLayer(hidden_size, hidden_dropout_prob)
+
+    def forward(self, input_tensor, ctx_tensor, ctx_att_mask=None):
+        output = self.cross_attn(input_tensor, ctx_tensor, ctx_att_mask)
+        attention_output = self.ffn(output, input_tensor)
+        return attention_output
+
+
+class Attention(nn.Module):
+    def __init__(self, hidden_size, num_attention_heads, attention_probs_dropout_prob=0.2, ctx_dim=None):
+        super().__init__()
+        if hidden_size % num_attention_heads != 0:
+            raise ValueError(
+                "The hidden size (%d) is not a multiple of the number of attention "
+                "heads (%d)" % (hidden_size, num_attention_heads))
+        self.hidden_size = hidden_size # 100
+        self.num_attention_heads = num_attention_heads # 10
+        self.attention_head_size = int(hidden_size / num_attention_heads) # 10
+        self.all_head_size = self.num_attention_heads * self.attention_head_size # 100, still original dimension
+
+        if ctx_dim is None: ctx_dim = hidden_size
+        self.query = nn.Linear(self.hidden_size, self.all_head_size) # [h1, dk]
+        self.key = nn.Linear(ctx_dim, self.all_head_size) # [h2, dv]
+        self.value = nn.Linear(ctx_dim, self.all_head_size) # [h2, dv]
+        self.dropout = nn.Dropout(attention_probs_dropout_prob)
+
+    def transpose_for_scores(self, x):
+        new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
+        x = x.view(*new_x_shape)
+        return x.permute(0, 2, 1, 3)
+
+    def forward(self, hidden_states, context, attention_mask=None):
+        """
+        hidden_states: [batch_size, N, h1]
+        context: [batch_size, M, h2]
+        """
+        mixed_query_layer = self.query(hidden_states) # [batch_size, N, dk]
+        mixed_key_layer = self.key(context) # [batch_size, N, dv]
+        mixed_value_layer = self.value(context) # [batch_size, N, dv]
+
+        query_layer = self.transpose_for_scores(mixed_query_layer)
+        key_layer = self.transpose_for_scores(mixed_key_layer)
