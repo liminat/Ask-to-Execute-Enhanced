@@ -231,4 +231,43 @@ class ActionDecoder(nn.Module):
         batch_size = utter_vec.shape[0]
         if location_mask is not None:
             extended_attention_mask = location_mask.unsqueeze(1).unsqueeze(2)
-            extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0 # [batch_size, 1
+            extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0 # [batch_size, 1, 1, 1089]
+
+        # Text 
+        utter_vec = self.text_self_attn[0](utter_vec, attention_mask=None)
+        
+        # World     
+        world_repr = self.world_encoder(world_repr)
+        world_repr = torch.cat((world_repr, last_action.unsqueeze(1).repeat(1, 1089, 1)), dim=2)
+        world_repr = self.world_self_attn[0](world_repr, attention_mask=extended_attention_mask)
+        
+        # Cross-Attn
+        for layer in range(1, self.text_layers):
+            utter_vec, world_repr = self.text_cross_attn[layer](utter_vec, world_repr, ctx_att_mask=extended_attention_mask), self.world_cross_attn[layer](world_repr, utter_vec, ctx_att_mask=None)
+            utter_vec, world_repr = self.text_self_attn[layer](utter_vec, attention_mask=None), self.world_self_attn[layer](world_repr, attention_mask=extended_attention_mask)
+            # [batch_size, seq_len, hidden_size]
+            # [batch_size, 1089, hidden_size]
+
+        for layer in range(self.text_layers, self.world_layers):
+            world_repr = self.world_cross_attn[layer](world_repr, utter_vec, ctx_att_mask=None)
+            world_repr = self.world_self_attn[layer](world_repr, attention_mask=extended_attention_mask)
+
+        color_matrix = self.color_module(utter_vec) # [batch_size, seq_len, 6]
+        color_logits = torch.mean(color_matrix, dim=-2) # [batch_size, 6]
+        action_type_matrix = self.action_type_module(utter_vec) # [batch_size, seq_len, 3]
+        action_type_logits = torch.mean(action_type_matrix, dim=-2) # [batch_size, 3]
+        location_logits = self.location_module(world_repr).squeeze(2) # [batch_size, 1089]
+
+        return location_logits, action_type_logits, color_logits
+
+
+class SelfattLayer(nn.Module):
+    def __init__(self, hidden_size, num_attention_heads, attention_probs_dropout_prob=0.1, hidden_dropout_prob=0.1):
+        super(SelfattLayer, self).__init__()
+        self.self_attn = Attention(hidden_size, num_attention_heads, attention_probs_dropout_prob)
+        self.ffn = FeedForwardLayer(hidden_size, hidden_dropout_prob)
+
+    def forward(self, input_tensor, attention_mask=None):
+        # Self attention attends to itself, thus keys and querys are the same (input_tensor).
+        self_output = self.self_attn(input_tensor, input_tensor, attention_mask)
+        attent
