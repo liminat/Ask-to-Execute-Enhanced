@@ -192,4 +192,43 @@ class ActionDecoder(nn.Module):
             total_color_loss += color_loss.sum()
             
             total_action_type_correct += sum(action_type_pred==action_type_label)
-            total_location 
+            total_location += sum(action_type_label < 2)
+            total_location_correct += sum(location_pred[action_type_label < 2] == location_label[action_type_label < 2])
+            total_color += sum(action_type_label == 0)
+            total_color_correct += sum(color_pred[action_type_label == 0] == color_label[action_type_label == 0])
+
+            return (total_location_loss, total_action_type_loss, total_color_loss), (total_action_type_correct, total_location, total_location_correct, total_color, total_color_correct), (location_pred, action_type_pred, color_pred)
+   
+    def compute_loss(self, location_logits, action_type_logits, color_logits, location_label, action_type_label, color_label, loss_fn):
+        location_loss = loss_fn(location_logits[action_type_label!=2], location_label[action_type_label!=2])
+        action_type_loss = loss_fn(action_type_logits, action_type_label)
+        color_loss = loss_fn(color_logits[action_type_label==0], color_label[action_type_label==0])
+        return location_loss, action_type_loss, color_loss
+
+    def compute_valid_loss(self, location_logits, action_type_logits, color_logits, location_label, action_type_label, color_label, loss_fn):
+        action_type_loss = 0
+        location_loss = 0
+        color_loss = 0
+        
+        if action_type_label==2:
+            action_type_loss = loss_fn(action_type_logits, action_type_label)
+        elif action_type_label==1:
+            location_loss = loss_fn(location_logits, location_label)
+            action_type_loss = loss_fn(action_type_logits, action_type_label)
+        else:
+            location_loss = loss_fn(location_logits, location_label)
+            action_type_loss = loss_fn(action_type_logits, action_type_label)
+            color_loss = loss_fn(color_logits, color_label)
+        return location_loss, action_type_loss, color_loss
+        
+    def _get_logits(self, utter_vec, world_repr, last_action, location_mask=None):
+        """
+        utter_vec: [batch_size, seq_len, hidden_size]
+        world_repr: [batch_size, 8, 11, 9, 11]
+        last_action: [batch_size, 11], 11=2+6+3, action_type, color, location
+        location_mask: [batch_size, 1089]
+        """
+        batch_size = utter_vec.shape[0]
+        if location_mask is not None:
+            extended_attention_mask = location_mask.unsqueeze(1).unsqueeze(2)
+            extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0 # [batch_size, 1
