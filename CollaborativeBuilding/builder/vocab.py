@@ -236,4 +236,48 @@ class Vocabulary(object):
 			if word in self.oov_words:
 				oov_tokens += self.word_counts[word]
 
-		# compute number of utterance
+		# compute number of utterances in training data with UNK in them
+		unk_utterances = 0
+		for utterance in self.tokenized_data:
+			for word in utterance:
+				if word not in self.word2idx:
+					unk_utterances += 1
+					break
+
+		print("\n"+str(rare_words), "of", len(self.word_counts), "total word types ("+'{:.1%}'.format(rare_words/float(len(self.word_counts)))+") in the train set were treated as unk, as they did not meet the rare word threshold ("+str(self.threshold)+").")
+		print("There are", rare_tokens, "total rare word tokens out of", total_tokens, "total tokens ("+'{:.1%}'.format(rare_tokens/float(total_tokens))+").")
+		print("Added", len(self.oov_words), "OOV word types to vocabulary, out of a total of", len(self.word_counts), "word types in the train set ("+'{:.1%}'.format(len(self.oov_words)/float(len(self.word_counts)))+").")
+		print("There are", oov_tokens, "total OOV tokens out of", total_tokens, "total tokens ("+'{:.1%}'.format(oov_tokens/float(total_tokens))+").\n")
+		print("OOV words:", self.oov_words, "\n")
+		print("There are", unk_utterances, "UNK utterances out of", len(self.tokenized_data), "total utterances ("+'{:.1%}'.format(unk_utterances/float(len(self.tokenized_data)))+").\n")
+
+	def add_word(self, word):
+		""" Adds a word to the vocabulary. """
+		idx = len(self.word2idx)
+		self.word2idx[word] = idx
+		self.idx2word[idx] = word
+
+	def __call__(self, word):
+		""" Gets a word's index. If the word doesn't exist in the vocabulary, returns the index of the unk token. """
+		if not word in self.word2idx:
+			return self.word2idx['<unk>']
+		return self.word2idx[word]
+
+	def __len__(self):
+		""" Returns size of the vocabulary. """
+		return len(self.word2idx)
+
+	def __str__(self):
+		""" Prints vocabulary in human-readable form. """
+		vocabulary = ""
+		for key in self.idx2word.keys():
+			vocabulary += str(key) + ": " + self.idx2word[key] + "\n"
+		return vocabulary
+
+def write_train_word_counts(vocab_path, word_counts, oov_words, threshold):
+	sorted_word_counts = sorted(word_counts.items(), key=lambda k_v: k_v[1], reverse=True)
+	with open(os.path.join('../vocabulary', vocab_path, 'word_counts.txt'), 'w') as f:
+		for key, value in sorted_word_counts:
+			suffix = 'unk' if value < threshold else 'oov' if key in oov_words else ''
+			f.write(key.ljust(30)+str(value).ljust(10)+suffix+'\n')
+	print("Wrote word counts t
