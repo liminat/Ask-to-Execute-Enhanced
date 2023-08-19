@@ -175,4 +175,65 @@ class Vocabulary(object):
 			tokens = line.split()
 
 			if len(tokens) != embed_size+1:
-				print("Warning: expe
+				print("Warning: expected line length:", str(embed_size+1)+", got:", str(len(tokens))+"; Line:", " ".join(line.split()[:3]), "...", " ".join(line.split()[-3:]))
+				continue
+
+			word = tokens[0]
+
+			# discard out-of-domain embeddings, if desired
+			if word not in self.word_counts or self.word_counts[word] < threshold: # if not in data or if rare
+				if word in self.word_counts: # rare words in data but have embeddings
+					for t in tokens[1:]:
+						data_rare.append(float(t))
+				continue
+
+			for t in tokens[1:]:
+				data.append(float(t))
+
+			self.add_word(word)
+
+		data_arr = np.reshape(data, newshape=(int(len(data)/embed_size), embed_size)) # real frequent words x embedding size
+		self.word_vectors = np.concatenate((self.word_vectors, data_arr), 0)
+		if data_rare:
+			data_rare_arr = np.reshape(data_rare, newshape=(int(len(data_rare)/embed_size), embed_size)) # real rare words x embedding size
+			avg_vector = np.expand_dims(np.mean(data_rare_arr, axis=0), axis=0)
+			self.add_unk(avg_vector) # set unk's embedding to the average embedding of the rare words
+		else:
+			print("Adding random vector for rare bucket as there are no rare words...")
+			self.add_unk(np.random.rand(1, embed_size))
+
+	def add_unk(self, avg_vector):
+		self.word_vectors = np.concatenate((self.word_vectors, avg_vector), 0)
+		self.add_word('<unk>')
+
+	def add_oov_vectors(self):
+		print("\nAdding OOV vectors ...")
+
+		threshold = self.threshold
+		embed_size = self.embed_size
+
+		# add words above the rare word threshold, but do not have pretrained embeddings, as OOV random vectors
+		for utterance in self.tokenized_data:
+			for word in utterance:
+				if word not in self.word2idx and self.word_counts[word] >= threshold:
+					self.word_vectors = np.concatenate((self.word_vectors, np.random.rand(1, embed_size)), 0)
+					self.add_word(word)
+					self.oov_words.add(word)
+
+	def print_vocab_statistics(self):
+		# compute number of rare word types and tokens
+		rare_words = 0
+		rare_tokens = 0
+		for word in self.word_counts:
+			if word not in self.word2idx:
+				rare_words += 1
+				rare_tokens += self.word_counts[word]
+
+		# compute number of OOV word types and tokens
+		oov_tokens, total_tokens = 0, 0
+		for word in self.word_counts:
+			total_tokens += self.word_counts[word]
+			if word in self.oov_words:
+				oov_tokens += self.word_counts[word]
+
+		# compute number of utterance
