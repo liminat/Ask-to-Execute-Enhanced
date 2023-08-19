@@ -102,4 +102,77 @@ class Vocabulary(object):
 					else:
 						utterance = line[len(architect_prefix):]
 				else:
-					# Include builder if either fla
+					# Include builder if either flag is on
+					if self.add_builder_utterances or self.builder_utterances_only:
+						utterance = line[len(builder_prefix):]
+					else:
+						continue
+
+				if self.lower:
+					utterance = utterance.lower()
+
+				tokenized, fixed = tokenize(utterance)
+				fixed_tokenizations.update(fixed)
+				self.tokenized_data.append(tokenized) ## store all tokens in dataset into tokenized_data (zshi)
+
+				for word in tokenized:
+					self.word_counts[word] += 1
+
+		print("\nTokenizations fixed:", fixed_tokenizations, "\n")
+
+	def init_vectors(self):
+		embed_size = self.embed_size
+
+		# pad token
+		vector_arr = np.zeros((1, embed_size))
+		self.add_word('<pad>') # id 0 # vector of 0's
+
+		if not self.vector_filename:
+			vector_arr = np.concatenate((vector_arr, np.random.rand(1, embed_size)), 0)
+			self.add_word('<unk>')
+
+		# start & end of sentence symbols
+		if not self.use_speaker_tokens: ## False (zshi)
+			vector_arr = np.concatenate((vector_arr, np.random.rand(2, embed_size)), 0)
+			self.add_word('<s>') # id 1 # random vector
+			self.add_word('</s>') # id 2 # random vector
+
+		# speaker tokens
+		else:
+			vector_arr = np.concatenate((vector_arr, np.random.rand(6, embed_size)), 0)
+			self.add_word('<dialogue>') # id 1 # random vector
+			self.add_word('</dialogue>') # id 2 # random vector
+			self.add_word('<architect>') # id 3 # random vector
+			self.add_word('</architect>') # id 4 # random vector
+			self.add_word('<builder>') # id 5 # random vector
+			self.add_word('</builder>') # id 6 # random vector
+
+		if self.use_builder_action_tokens: ## False (zshi)
+			vector_arr = np.concatenate((vector_arr, np.random.rand(12, embed_size)), 0)
+			for color_key in type2id:
+				self.add_word('<builder_pickup_'+color_key+'>')
+				self.add_word('<builder_putdown_'+color_key+'>')
+
+		self.word_vectors = vector_arr
+
+	def load_vectors(self):
+		vector_filename = self.vector_filename
+		print("\nLoading word embedding vectors from", vector_filename, "...")
+
+		embed_size = self.embed_size
+		threshold = self.threshold
+
+		f = None
+		if vector_filename.endswith('.gz'): # TODO: this doesn't work. fix loading of word2vec pretrained model
+			f = gzip.open(vector_filename, 'rt')
+		else:
+			f = open(vector_filename, 'r')
+
+		# load word embeddings from file
+		data = []
+		data_rare = []
+		for line in f:
+			tokens = line.split()
+
+			if len(tokens) != embed_size+1:
+				print("Warning: expe
