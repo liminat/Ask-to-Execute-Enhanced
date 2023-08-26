@@ -51,3 +51,27 @@ def main(args, config):
             test_total_location += test_acc[1]
             test_total_location_correct += test_acc[2]
             test_total_color += test_acc[3]
+            test_total_color_correct += test_acc[4]
+            test_total_actions += labels.shape[1]
+            test_pred_seqs.append(test_predicted_seq)
+            test_raw_inputs.append(raw_input)
+
+        test_action_recall, test_action_precision, test_action_f1 = evaluate_metrics(test_pred_seqs, test_raw_inputs)
+        test_loss = test_loss / len(test_items) 
+
+    print('Test | Recall: {}, Precision: {}, F1: {}, Loss: {}'.format(test_action_recall, test_action_precision, test_action_f1, test_loss))
+    print('Test | Location Acc: {}, Action Type Acc: {}, Color Acc: {}\n\n\n'.format(test_total_location_correct/test_total_location, test_total_action_type_correct/test_total_actions, test_total_color_correct/test_total_color))
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--saved_models_path', type=str, default='./default_path', help='path for saving trained models')
+    parser.add_argument('--encoder_vocab_path', type=str, default='../data/vocabulary/glove.42B.300d-lower-1r-speaker-oov_as_unk-all_splits/vocab.pkl')
+    # Args for dataset
+    parser.add_argument('--json_data_dir', type=str, default="./builder_data_with_glove") 
+    parser.add_argument('--load_items', default=True)
+
+    args = parser.parse_args()
+    with open(os.path.join(args.saved_models_path, "config.json"), "r") as fp:
+        config = json.load(fp)
+    main(args, config)
