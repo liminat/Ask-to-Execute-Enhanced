@@ -1,0 +1,60 @@
+from enum import unique
+import tqdm
+import sys, torch, json, copy, pickle, re, os, numpy as np, pprint as pp, cProfile, pstats, io, traceback, itertools, random
+sys.path.append('..')
+from builder.diff import diff, get_diff, build_region_specs, dict_to_tuple, is_feasible_next_placement
+
+from torch.utils.data import Dataset, DataLoader
+from collections import defaultdict, Counter
+from operator import itemgetter
+from utils import *
+from builder.utils_builder import is_a_id, split_line
+
+# MAIN CLASSES
+
+class CwCDataset(Dataset):
+	""" CwC Dataset compatible with torch.utils.data.DataLoader. """
+
+	def __init__(
+		self, split, compute_perspective=True,
+		data_dir="../../data/logs/", gold_configs_dir="../../data/gold-configurations/", save_dest_dir="../builder_with_questions_data", saved_dataset_dir="../builder_with_questions_data",
+		dump_dataset=False, load_dataset=False,
+		add_augmented_data=False, aug_data_dir="../../data/augmented/logs/", aug_gold_configs_dir="../../data/augmented/gold-configurations/",
+        aug_sampling_strict=False, lower=False
+	):
+		"""
+		Instantiates a dataset
+			- If dump_dataset and load_dataset are both un-set, generates the dataset
+			- If dump_dataset is set, also writes the generated dataset to file
+			- If load_dataset is set, loads an existing dataset instead of generating (needed most often)
+
+		By dataset, we mean self.samples and self.jsons -- the former being actual train/test examples, the latter being the json log files used to obtain these samples
+
+		"""
+
+		self.split = split
+		self.lower = lower
+		self.compute_perspective = compute_perspective
+		self.add_augmented_data = add_augmented_data
+
+		self.num_prev_utterances = 1
+		self.include_empty_channel = False
+
+		self.aug_sampling_strict = aug_sampling_strict
+
+		cwc_datasets_path = save_dest_dir
+
+		lower_str = "lower" if self.lower else ""
+		pers_str = '-no_perspective_coords' if not self.compute_perspective else ""
+		aug_str = "-augmented" if self.add_augmented_data else ""
+
+		if load_dataset:
+			dataset_dir = saved_dataset_dir
+
+			print("Loading dataset ...\n")
+
+			print("Loading self.samples ...")
+			self.samples = load_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl")
+
+			print("Loading self.jsons ...")
+			self.jsons = load_pkl_data(dataset_dir + "/"+ self.split + "-jsons.p
