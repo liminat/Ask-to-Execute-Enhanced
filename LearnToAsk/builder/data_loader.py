@@ -57,4 +57,70 @@ class CwCDataset(Dataset):
 			self.samples = load_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl")
 
 			print("Loading self.jsons ...")
-			self.jsons = load_pkl_data(dataset_dir + "/"+ self.split + "-jsons.p
+			self.jsons = load_pkl_data(dataset_dir + "/"+ self.split + "-jsons.pkl")
+
+			print("Done! Loaded dataset of size", len(self.samples))
+
+		else:
+			self.jsons = list(
+				map(
+					remove_empty_states,
+					map(
+						reorder,
+						get_logfiles_with_gold_config(data_dir, gold_configs_dir, split)
+					)
+				)
+			) # TODO: Move the extra maps to a postprocesing step for the dataset?
+
+			if self.add_augmented_data:
+				print(timestamp(), "Adding augmented dataset...")
+
+				def reformat_utterances(aug_observations_json):
+					"""
+						Joins tokens back with a space
+					"""
+					for world_state in aug_observations_json["WorldStates"]:
+						world_state["ChatHistoryTokenized"] = list(map(
+							lambda x: " ".join(x), world_state["ChatHistoryTokenized"]
+						))
+						world_state["ChatHistory"] = world_state.pop("ChatHistoryTokenized")
+
+					return aug_observations_json
+
+				self.jsons += list(
+					map(
+						remove_empty_states,
+						map(
+							reorder,
+							map(
+								reformat_utterances,
+								get_logfiles_with_gold_config(aug_data_dir, aug_gold_configs_dir, split, from_aug_data=True)
+							)
+						)
+					)
+				)
+
+			print(timestamp(), 'Started processing jsons to get samples...')
+			self.samples = self.process_samples(lower, compute_perspective=self.compute_perspective)
+			print(timestamp(), 'Done processing jsons to get samples.')
+
+			if self.add_augmented_data:
+				samples_split = {'orig': [], 'aug': []}
+				for sample in self.samples:
+					samples_split['orig'].append(sample) if not sample.get('from_aug_data') else samples_split['aug'].append(sample)
+				print('\nOriginal dataset contains', len(samples_split['orig']), 'original samples and', len(samples_split['aug']), 'augmented samples ('+str(len(samples_split['orig'])+len(samples_split['aug'])), 'total samples).')
+
+				augmented_data_fractions = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9]
+				augmented_data_fractions = list(map(lambda x: x/2, augmented_data_fractions))
+				mixed_data_size = ["2x", "4x", "6x", "8x", "10x", "12x", "14x", "16x", "18x", "20x"]
+				num_aug_samples_per_orig = list(range(1, 20, 2))
+
+				frac2size = dict(zip(augmented_data_fractions, mixed_data_size))
+				frac2data = {}
+
+				if self.aug_sampling_strict:
+					grouped_aug_samples, _ = group_samples_by_id(samples_split['aug'])
+
+				for frac, num_samples in zip(augmented_data_fractions, num_aug_samples_per_orig):
+					if not self.aug_sampling_strict:
+						print('Filtering augmented samples with a fraction of', frac, '...
