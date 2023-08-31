@@ -186,4 +186,59 @@ class CwCDataset(Dataset):
 
 		try:
 			for j in tqdm.tqdm(range(len(self.jsons))):
-     
+                ## This is to preprocess each dialogue example, len(train_jsons),len(val_jsons),len(test_jsons) = (281, 101, 137)
+
+				try:
+					js = self.jsons[j]
+					unique_id = js['log_dir']
+					builder_utterance_labels_unique_id = builder_utterance_labels[unique_id]
+
+					if js["from_aug_data"]:
+						orig_log_dir = re.sub(r"_\d+", "", js["log_dir"])
+					else:
+						orig_log_dir = js["log_dir"]
+
+					# print(js["logfile_path"] + "\n")
+					world_states = js["WorldStates"]
+					# print(world_states[0])
+					# sys.exit(0)
+					final_observation = world_states[-1]
+					gold_config = js["gold_config_structure"]
+
+					last_world_state = None
+					chat_history = []
+					chat_with_actions_history = []
+
+					## this for loop is to construct chat_with_actions_history (zshi)
+					## each element in chat_with_actions_history will be a sample
+					for i in range(1, len(world_states)):
+						if i > 1:
+							action_history = world_states[i - 1]["ActionHistory"]
+						else:
+							action_history = []
+						observation = world_states[i]
+						observation["ActionHistory"] = action_history
+						built_config = get_built_config(observation)
+						builder_position = get_builder_position(observation)
+						prev_builder_position = get_builder_position(world_states[i-1])
+						last_action = None
+
+						for k, curr_world_state in enumerate(reversed(world_states[:i+1])):
+							original_index = i-k
+
+							# compare blocks with its prev world state
+							curr_blocks = curr_world_state["BlocksInGrid"]
+							prev_blocks = [] if original_index == 0 else world_states[original_index-1]["BlocksInGrid"]
+							last_action = get_last_action(curr_blocks, prev_blocks)
+
+							if last_action:
+								break
+
+						if not last_world_state:
+							for i2 in range(len(observation["ChatHistory"])):
+								chat_history.append(observation["ChatHistory"][i2].strip())
+
+								for block in built_config:
+									chat_with_actions_history.append({"idx": i, "action": "putdown", "type": block["type"], "x": block["x"], "y": block["y"], "z": block["z"], "built_config": built_config, "prev_config": None, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
+
+								chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i2].strip(), "built_config": built_config, "prev_config": None, "builder_position": builder_position, "prev_builder_position": p
