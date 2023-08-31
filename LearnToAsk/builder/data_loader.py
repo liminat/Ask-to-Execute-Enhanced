@@ -123,4 +123,67 @@ class CwCDataset(Dataset):
 
 				for frac, num_samples in zip(augmented_data_fractions, num_aug_samples_per_orig):
 					if not self.aug_sampling_strict:
-						print('Filtering augmented samples with a fraction of', frac, '...
+						print('Filtering augmented samples with a fraction of', frac, '...')
+						chosen_aug_samples = list(np.random.choice(samples_split['aug'], int(frac*len(samples_split['aug'])), replace=False))
+					else:
+						print('Filtering augmented samples per group with a num_samples of', num_samples, '...')
+						chosen_aug_samples = sample_strictly(grouped_aug_samples, num_samples)
+
+					print('Randomly sampled', len(chosen_aug_samples), 'augmented samples from the full augmented set.')
+
+					mixed_samples = samples_split['orig'] + chosen_aug_samples
+					frac2data[frac] = mixed_samples
+
+			print("Current dataset size", len(self.samples))
+			print("Done! Loaded vanilla dataset of size", len(self.samples))
+
+			if dump_dataset:
+				if self.add_augmented_data:
+					for frac, data in frac2data.items():
+						# FIXME: Resuse code
+						# Generate semi-unique file path based on inputs
+						aug_frac_str = "-" + frac2size[frac]
+						dataset_dir = lower_str + pers_str + aug_str + aug_frac_str
+						dataset_dir = os.path.join(cwc_datasets_path, dataset_dir)
+
+						if not os.path.exists(dataset_dir):
+							os.makedirs(dataset_dir)
+
+						print("Saving dataset ...\n")
+
+						print("Saving self.jsons ...") # NOTE: These are ALL vanilla + aug jsons -- does not correspond to the ones used in samples only
+						save_pkl_data(dataset_dir + "/"+ self.split + "-jsons.pkl", self.jsons)
+
+						print("Saving self.samples ...")
+						save_pkl_data(dataset_dir + "/"+ self.split + "-samples.pkl", data)
+
+						# write which aug dir used
+						with open(os.path.join(dataset_dir, "aug_data_dir.txt"), 'w') as f:
+							f.write(os.path.abspath(aug_data_dir))
+
+				else:
+					# Generate semi-unique file path based on inputs
+
+					print("Saving dataset ...\n")
+
+					print("Saving self.jsons ...")
+					if not os.path.exists(save_dest_dir):
+						os.makedirs(save_dest_dir)
+					save_pkl_data(save_dest_dir + "/"+ self.split + "-jsons.pkl", self.jsons)
+
+					print("Saving self.samples ...")
+					save_pkl_data(save_dest_dir + "/"+ self.split + "-samples.pkl", self.samples)
+
+		self.augmentation_factor = 0
+
+	def get_sample(self, idx):
+		""" Returns one data sample (utterance) in tokenized form. """
+		return self.samples[idx]
+
+	def process_samples(self, lower, compute_diff=True, compute_perspective=True):
+		""" Preprocesses the input JSONs and generates a list of data samples. """
+		samples = []
+
+		try:
+			for j in tqdm.tqdm(range(len(self.jsons))):
+     
