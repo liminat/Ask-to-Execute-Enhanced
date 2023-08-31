@@ -241,4 +241,47 @@ class CwCDataset(Dataset):
 								for block in built_config:
 									chat_with_actions_history.append({"idx": i, "action": "putdown", "type": block["type"], "x": block["x"], "y": block["y"], "z": block["z"], "built_config": built_config, "prev_config": None, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
 
-								chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i2].strip(), "built_config": built_config, "prev_config": None, "builder_position": builder_position, "prev_builder_position": p
+								chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i2].strip(), "built_config": built_config, "prev_config": None, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
+
+						else:
+							prev_config = get_built_config(last_world_state)
+							config_diff = diff(gold_config=built_config, built_config=prev_config)
+
+							config_diff["gold_minus_built"] = sorted(config_diff["gold_minus_built"], key=itemgetter('x', 'y', 'z', 'type'))
+							config_diff["built_minus_gold"] = sorted(config_diff["built_minus_gold"], key=itemgetter('x', 'y', 'z', 'type'))
+
+							delta = {"putdown": config_diff["gold_minus_built"], "pickup": config_diff["built_minus_gold"]}
+
+							for action_type in delta:
+								for block in delta[action_type]:
+									chat_with_actions_history.append({"idx": i, "action": action_type, "type": block["type"], "x": block["x"], "y": block["y"], "z": block["z"], "built_config": built_config, "prev_config": prev_config, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
+
+							if len(observation["ChatHistory"]) > len(last_world_state["ChatHistory"]):
+								for i3 in range(len(last_world_state["ChatHistory"]), len(observation["ChatHistory"])):
+									chat_history.append(observation["ChatHistory"][i3].strip())
+									chat_with_actions_history.append({"idx": i, "action": "chat", "utterance": observation["ChatHistory"][i3].strip(), "built_config": built_config, "prev_config": prev_config, "builder_position": builder_position, "prev_builder_position": prev_builder_position, "last_action": last_action})
+
+						last_world_state = observation
+                    
+
+					# process dialogue line-by-line
+
+					assert observation["ActionHistory"] == []
+
+					for i in range(len(chat_with_actions_history)):
+						elem = chat_with_actions_history[i]
+						weight = None
+						if elem['action'] == 'chat':
+							
+							utterance = elem["utterance"]
+							idx = elem['idx']
+							built_config = elem["built_config"]
+							prev_config = elem["prev_config"] 
+
+							prev_builder_position = elem["prev_builder_position"]
+
+							if utterance.startswith('<Architect>') and i < len(chat_with_actions_history) - 1: ## i == len(chat_with_actions_history) - 1 means finished
+								next_elem = chat_with_actions_history[i+1]
+								if next_elem['action'] == 'chat' and next_elem["utterance"].startswith('<Builder>'):
+
+									build
