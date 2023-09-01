@@ -331,4 +331,62 @@ class CwCDataset(Dataset):
 								if elem['action'] == "pickup":
 									weight = 0
 
-								next_builder_action = BuilderAction(e
+								next_builder_action = BuilderAction(elem["x"], elem["y"], elem["z"], elem["type"], elem["action"], weight)
+								#pp.PrettyPrinter(indent=4).pprint(next_builder_action.weight)
+								observation["ActionHistory"].append(next_builder_action)
+
+							def get_all_next_actions(start_index):
+								all_next_actions = []
+								# slicing below to create copies and avoid effects of mutation as observation["ActionHistory"] is updated
+								action_history = observation["ActionHistory"][:-1]
+
+								for zzz in range(start_index, len(chat_with_actions_history)):
+									next_elem = chat_with_actions_history[zzz]
+									if next_elem['action'] == 'chat':
+										break
+									else:
+										weight = None
+										all_next_actions.append(
+											BuilderActionExample(
+												action = BuilderAction(next_elem["x"], next_elem["y"], next_elem["z"], next_elem["type"], next_elem["action"], weight),
+												built_config = next_elem["built_config"],
+												prev_config = next_elem["prev_config"] if next_elem["prev_config"] else [],
+												action_history = action_history
+											)
+										)
+										action_history = action_history + [(
+											BuilderAction(next_elem["x"], next_elem["y"], next_elem["z"], next_elem["type"], next_elem["action"], weight)
+										)] # NOTE: concatenation to avoid mutation
+
+								return all_next_actions
+
+							if i > 0:
+								prev_elem = chat_with_actions_history[i-1]
+								if not prev_elem['action'] == 'chat':
+									continue
+								
+							all_next_actions = get_all_next_actions(i)
+
+							idx = elem['idx']
+							built_config = elem["built_config"]
+							prev_config = elem["prev_config"] ## list of dicts, prev_config is always one elem less than built_config
+							prev_builder_position = elem["prev_builder_position"]
+
+							def valid_config(config):
+								if not config:
+									return True
+
+								for block in config:
+									x, y, z = block["x"]-x_min, block["y"]-y_min, block["z"]-z_min
+									if x < 0 or x >= x_range or y < 0 or y >= y_range or z < 0 or z >= z_range:
+										return False
+
+								return True
+
+							# temporary fix for troublesome configs
+							if not valid_config(built_config) or not valid_config(prev_config):
+								continue
+
+							skip_sample = False
+							for next_action in all_next_actions:
+								if not valid_config(next_action.built_co
