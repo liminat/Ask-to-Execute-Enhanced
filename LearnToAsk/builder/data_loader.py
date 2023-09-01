@@ -284,4 +284,51 @@ class CwCDataset(Dataset):
 								next_elem = chat_with_actions_history[i+1]
 								if next_elem['action'] == 'chat' and next_elem["utterance"].startswith('<Builder>'):
 
-									build
+									builder_utterance = next_elem["utterance"]
+
+									prev_utterances = []
+									prev_utterances.append({'speaker': 'Builder', 'utterance': ['<dialogue>']})
+
+									for k in range(i):
+										prev_elem = chat_with_actions_history[k]
+
+										if prev_elem['action'] != 'chat': ## Action 
+											prev_utterances.append({'speaker': 'Builder', 'utterance': ['<builder_'+prev_elem['action']+'_'+prev_elem['type']+'>']})
+
+										else:  ## Utterance 
+											prev_utterance = prev_elem['utterance']
+											prev_speaker = "Architect" if "Architect" in prev_utterance.split()[0] else "Builder"
+											prev_utterance = prev_utterance[len(architect_prefix):] if prev_speaker == 'Architect' else prev_utterance[len(builder_prefix):]
+											prev_tokenized, _ = tokenize(prev_utterance.lower() if lower else prev_utterance) ## (zshi)			
+											prev_utterances.append({'speaker': prev_speaker, 'utterance': prev_tokenized})
+                                    
+									perspective_coordinates = None if not compute_perspective else torch.Tensor(get_perspective_coord_repr(prev_builder_position))
+
+									add_dict = {}
+									add_dict.update({'builder_action_history': observation["ActionHistory"]})
+									add_dict.update(
+										{
+											'builder_action': builder_utterance_labels_unique_id[builder_utterance.lower()],
+											'prev_utterances': prev_utterances, # previous utterances
+											'gold_config': gold_config,
+											'built_config': built_config,
+											'prev_config': prev_config if prev_config else [], # NOTE: CRITICAL FOR PREDICTING BUILDER ACTIONS -- INPUT TO MODEL SHOULD BE THIS AND NOT BUILT CONFIG
+											'prev_builder_position': prev_builder_position,
+											'perspective_coordinates': perspective_coordinates,
+											'from_aug_data': js['from_aug_data'],
+											'json_id': j, # ID of the json this sample was obtained from
+											'sample_id': idx, # ID assigned to this sample,
+											'orig_experiment_id': orig_log_dir # original log dir/experiment ID (for augmented data -- this is the same as the original counterpart)
+										}
+									)
+
+									samples.append(add_dict)
+						
+						else:
+							if elem['action'] != 'chat':
+								if elem['action'] == "putdown":
+									weight = 1
+								if elem['action'] == "pickup":
+									weight = 0
+
+								next_builder_action = BuilderAction(e
