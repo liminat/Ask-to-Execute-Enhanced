@@ -439,4 +439,84 @@ class CwCDataset(Dataset):
 
 				except Exception:
 					print('Something went wrong processing this json, skipping...')
-					traceback.print_ex
+					traceback.print_exc()
+
+		except KeyboardInterrupt:
+			print('Exiting from processing json early... Not all samples have been added.')
+
+		return samples
+
+	def __len__(self):
+		""" Returns length of dataset. """
+		return len(self.samples)
+
+	def get_data_loader(self, batch_size=1, shuffle=True, num_workers=1):
+		return DataLoader(dataset=self, batch_size=batch_size, shuffle=shuffle, num_workers=num_workers, collate_fn=self.collate_fn)
+
+# UTILS
+
+class Region:
+    """
+        Stores a specfic region in 3d space
+    """
+    def __init__(self, x_min, x_max, y_min, y_max, z_min, z_max):
+        """
+            Bounds of the region
+        """
+        self.x_min = x_min
+        self.x_max = x_max
+        self.y_min = y_min
+        self.y_max = y_max
+        self.z_min = z_min
+        self.z_max = z_max
+
+        assert self.x_min <= self.x_max and self.y_min <= self.y_max and self.z_min <= self.z_max, "Invalid x/y/z bounds for Region object."
+
+def group_samples_by_id(samples):
+	groups = []
+	uniquekeys = []
+	sorted_samples = sorted(samples, key=lambda x: (x["orig_experiment_id"], x["sample_id"]))
+	for k, g in itertools.groupby(sorted_samples, key=lambda x: (x["orig_experiment_id"], x["sample_id"])):
+		groups.append(list(g))
+		uniquekeys.append(k)
+
+	return groups, uniquekeys
+
+def sample_strictly(grouped_aug_samples, num_samples):
+	sampled = []
+	for group in grouped_aug_samples:
+		for sample in list(np.random.choice(group, num_samples, replace=False)):
+			sampled.append(sample)
+
+	return sampled
+
+def discretize_yaw(yaw):
+    """
+        Discretize a yaw angle into the 4 canonical yaw angles/directions
+    """
+    # normalize to [0, 360]
+    if yaw < 0:
+        yaw_normalized = 360 + yaw
+    else:
+        yaw_normalized = yaw
+
+    # discretize
+    if (yaw_normalized >= 270 + 45 and yaw_normalized <= 360) or (yaw_normalized >= 0 and yaw_normalized < 0 + 45):
+        return 0
+    elif yaw_normalized >= 0 + 45 and yaw_normalized < 90 + 45:
+        return 90
+    elif yaw_normalized >= 90 + 45 and yaw_normalized < 180 + 45:
+        return 180
+    else:
+        return -90
+
+def remove_empty_states(observations):
+    observations["WorldStates"] = list(filter(lambda x: x["BuilderPosition"] != None, observations["WorldStates"]))
+    return observations
+
+def reorder(observations):
+    """
+    Returns the observations dict by reordering blocks temporally in every state
+    """
+    for i, state in enumerate(observations["WorldStates"]):
+        prev_blocks = [] if i == 0 else observations["World
