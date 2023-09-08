@@ -573,4 +573,43 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--split', default='train', help='dataset split')
     
-    parser.add_argument('--builder_ut
+    parser.add_argument('--builder_utterance_labels', default='../../builder_utterance_labels.txt')
+    parser.add_argument('--save_dest_dir', default='../builder_with_questions_data', help='where to write samples') 
+    parser.add_argument('--aug_data_dir', default='', help='where to load augmented data from')
+    parser.add_argument('--aug_gold_configs_dir', default='', help='where to load augmented gold configs from')
+
+    parser.add_argument('--dump_dataset', default=True, help='build the dataset')
+    parser.add_argument('--add_augmented_data', default=False, action='store_true', help='add dialog-level augmented dataset')
+    parser.add_argument('--ignore_perspective', default=False, action='store_true', help='skip computing perspective coordinates')
+
+    parser.add_argument('--load_dataset', default=False, action='store_true', help='load a dataset')
+    parser.add_argument('--saved_dataset_dir', default="../builder_with_questions_data", help='location of saved dataset')
+
+    parser.add_argument('--aug_sampling_strict', default=False, action='store_true', help='whether or not to sample strictly, i.e., from every aug group -- we recommend sticking to the default')
+
+    parser.add_argument('--seed', type=int, default=1234, help='random seed')
+
+    args = parser.parse_args()
+
+    builder_utterance_labels = {}
+    with open(args.builder_utterance_labels, 'r') as f:
+        lines = f.readlines()
+        for i in range(len(lines)):
+            line = lines[i].strip().strip('\n')
+            if not line:
+                continue
+            if is_a_id(line):
+                if i != 0:
+                    builder_utterance_labels[unique_id] = builder_utterance_dict
+                unique_id = line
+                builder_utterance_dict = {}
+            else:
+                utterance, label, corrected_utterance = split_line(line)
+                builder_utterance_dict[utterance] = label
+        builder_utterance_labels[unique_id] = builder_utterance_dict
+
+    dataset = CwCDataset(
+        split=args.split, compute_perspective=not args.ignore_perspective,
+		dump_dataset=args.dump_dataset, load_dataset=args.load_dataset,
+        saved_dataset_dir=args.saved_dataset_dir, add_augmented_data=args.add_augmented_data,
+        save_dest_dir=args.save_dest_dir, aug_data_dir=args.aug_data_dir, aug_gold_configs_dir=ar
