@@ -612,4 +612,7 @@ if __name__ == '__main__':
         split=args.split, compute_perspective=not args.ignore_perspective,
 		dump_dataset=args.dump_dataset, load_dataset=args.load_dataset,
         saved_dataset_dir=args.saved_dataset_dir, add_augmented_data=args.add_augmented_data,
-        save_dest_dir=args.save_dest_dir, aug_data_dir=args.aug_data_dir, aug_gold_configs_dir=ar
+        save_dest_dir=args.save_dest_dir, aug_data_dir=args.aug_data_dir, aug_gold_configs_dir=args.aug_gold_configs_dir,
+        aug_sampling_strict=args.aug_sampling_strict
+    )
+
