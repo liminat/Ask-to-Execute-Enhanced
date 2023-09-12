@@ -283,4 +283,80 @@ def generate_perturbation(config, x_target, z_target, rot_target, gold_config):
     R_yaw = rot_matrices_dict[-1 * rot_target]
 
     def h(d, rot_matrix):
-        v = np.matrix([
+        v = np.matrix([ [ d["x"] ], [ d["y"] ], [ d["z"] ] ])
+        v_new = rot_matrix * v
+
+        return {
+            'x': int(round(v_new.item(0))),
+            'y': int(round(v_new.item(1))),
+            'z': int(round(v_new.item(2))),
+            'type': d["type"]
+        }
+
+    config_translated_rotated = list([h(t, rot_matrix = R_yaw) for t in config_translated])
+
+    return PerturbedConfig(
+        perturbed_config = config_translated_rotated,
+        x_target = x_target,
+        z_target = z_target,
+        rot_target = rot_target,
+        rot_axis_pivot = (0, 0, 0),
+        translation = (x_diff, z_diff),
+        original_config = config
+    )
+
+def invert_perturbation_transform(config, perturbed_config):
+
+    # rotate
+    rot_target = -1 * perturbed_config.rot_target
+
+    # rotate about pivot
+
+    # obtain yaw rotation matrix
+    R_yaw = rot_matrices_dict[-1 * rot_target]
+
+    def h(d, rot_matrix):
+        v = np.matrix([ [ d["x"] ], [ d["y"] ], [ d["z"] ] ])
+        v_new = rot_matrix * v
+
+        return {
+            'x': int(round(v_new.item(0))),
+            'y': int(round(v_new.item(1))),
+            'z': int(round(v_new.item(2))),
+            'type': d["type"]
+        }
+
+    config_rotated = list([h(t, rot_matrix = R_yaw) for t in config])
+
+    x_diff = -1 * perturbed_config.translation[0]
+    z_diff = -1 * perturbed_config.translation[1]
+
+    # translate
+    def f(d, x_diff, z_diff):
+        return {
+            'x': d["x"] - x_diff,
+            'y': d["y"],
+            'z': d["z"] - z_diff,
+            'type': d["type"]
+        }
+
+    config_rotated_translated = list([f(t, x_diff = x_diff, z_diff = z_diff) for t in config_rotated])
+
+    return config_rotated_translated
+
+class PerturbedConfig:
+    def __init__(self, perturbed_config, x_target, z_target, rot_target, rot_axis_pivot, translation, original_config):
+        self.perturbed_config = perturbed_config
+        self.rot_target = rot_target
+        self.rot_axis_pivot = rot_axis_pivot
+        self.translation = translation
+        self.original_config = original_config
+        self.x_target = x_target
+        self.z_target = z_target
+
+class Diff:
+    def __init__(self, diff_built_config_space, diff_gold_config_space):
+        self.diff_built_config_space = diff_built_config_space
+        self.diff_gold_config_space = diff_gold_config_space
+
+cla
