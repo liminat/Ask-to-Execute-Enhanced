@@ -189,4 +189,98 @@ def generate_perturbations(config, gold_config, optimal_alignment=None):
     for x in all_x_values:
         for z in all_z_values:
             for rot in all_rot_values:
-                perturbation = generate_perturbation(config, x_target = x, z_target
+                perturbation = generate_perturbation(config, x_target = x, z_target = z, rot_target = rot, gold_config = gold_config)
+                perturbations.append(perturbation)
+
+    return perturbations
+
+def perturb_builder_position(dummy_block, x_target, z_target, rot_target):
+    # move origin to x, z and with rotation
+
+    # compute diff
+    x_source = 0
+    z_source = 0
+    x_diff = x_target - x_source
+    z_diff = z_target - z_source
+
+    # translate
+    def f(d, x_diff, z_diff):
+        return {
+            'x': d["x"] - x_diff,
+            'y': d["y"],
+            'z': d["z"] - z_diff,
+            'type': d["type"]
+        }
+
+    dummy_block_translated = f(dummy_block, x_diff = x_diff, z_diff = z_diff)
+
+    # rotate
+
+    # rotate about origin
+
+    # obtain yaw rotation matrix
+    R_yaw = rot_matrices_dict[-1 * rot_target]
+
+    def h(d, rot_matrix):
+        v = np.matrix([ [ d["x"] ], [ d["y"] ], [ d["z"] ] ])
+        v_new = rot_matrix * v
+
+        return {
+            'x': v_new.item(0),
+            'y': v_new.item(1),
+            'z': v_new.item(2),
+            'type': d["type"]
+        }
+
+    dummy_block_translated_rotated = h(dummy_block_translated, rot_matrix = R_yaw)
+
+    return dummy_block_translated_rotated
+
+def generate_perturbation(config, x_target, z_target, rot_target, gold_config):
+
+    if not config:
+        # compute diff
+        x_source = 0
+        z_source = 0
+
+        x_diff = x_target - x_source
+        z_diff = z_target - z_source
+
+        return PerturbedConfig(
+            perturbed_config = [],
+            x_target = x_target,
+            z_target = z_target,
+            rot_target = rot_target,
+            rot_axis_pivot = (0, 0, 0),
+            translation = (x_diff, z_diff),
+            original_config = config
+        )
+
+    # move origin to x, z and with rotation
+
+    # compute diff
+    x_source = 0
+    z_source = 0
+    x_diff = x_target - x_source
+    z_diff = z_target - z_source
+
+    # translate
+    def f(d, x_diff, z_diff):
+        return {
+            'x': d["x"] - x_diff,
+            'y': d["y"],
+            'z': d["z"] - z_diff,
+            'type': d["type"]
+        }
+
+    config_translated = list([f(t, x_diff = x_diff, z_diff = z_diff) for t in config])
+
+    # rotate
+
+    # rotate about origin
+
+    # obtain yaw rotation matrix
+    R_yaw = rot_matrices_dict[-1 * rot_target]
+
+    def h(d, rot_matrix):
+        v = np.matrix([
