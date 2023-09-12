@@ -124,4 +124,69 @@ def is_feasible_perturbation(perturbed_config, diff):
     for key, diff_config in list(diff.items()):
         if key == "built_minus_gold": # retrieve from original built config instead of applying inverse transform
             block_pairs = list(zip(perturbed_config.perturbed_config, perturbed_config.original_config))
-            diff[key] = list([find_orig_block(x, block_pairs) for x in 
+            diff[key] = list([find_orig_block(x, block_pairs) for x in diff_config])
+        else:
+            diff[key] = invert_perturbation_transform(
+                config = diff_config,
+                perturbed_config = perturbed_config
+            )
+
+    return is_feasible_config(diff["gold_minus_built"])
+
+def is_feasible_config(config):
+    """
+    Args:
+        config: List of blocks
+    """
+    def is_feasible_block(d):
+        if (build_region_specs["x_min_build"] <= d["x"] <= build_region_specs["x_max_build"]) and (build_region_specs["y_min_build"] <= d["y"] <= build_region_specs["y_max_build"]) and (build_region_specs["z_min_build"] <= d["z"] <= build_region_specs["z_max_build"]):
+            return True
+        else:
+            return False
+
+    return all(is_feasible_block(block) for block in config)
+
+def diff(gold_config, built_config):
+    gold_config_reformatted = list(map(dict_to_tuple, gold_config))
+    built_config_reformatted = list(map(dict_to_tuple, built_config))
+
+    gold_minus_built = set(gold_config_reformatted) - set(built_config_reformatted)
+    built_minus_gold = set(built_config_reformatted) - set(gold_config_reformatted)
+
+    gold_minus_built = list(map(dict, gold_minus_built))
+    built_minus_gold = list(map(dict, built_minus_gold))
+
+    return {
+        "gold_minus_built": gold_minus_built,
+        "built_minus_gold": built_minus_gold
+    }
+
+def dict_to_tuple(d):
+    return tuple(sorted(d.items()))
+
+def generate_perturbations(config, gold_config, optimal_alignment=None):
+    """
+    Args:
+        config: A configuration
+
+    Returns:
+        All perturbations of the config in build region
+    """
+
+    if optimal_alignment != None:
+        perturbation = generate_perturbation(
+            config, x_target=optimal_alignment[0], z_target=optimal_alignment[1], rot_target=optimal_alignment[2], gold_config=gold_config
+        )
+
+        return [perturbation]
+
+    all_x_values = [i for i in range(build_region_specs["x_min_build"] - 5, build_region_specs["x_max_build"] + 1 + 5)]
+    all_z_values = [i for i in range(build_region_specs["z_min_build"] - 5, build_region_specs["z_max_build"] + 1 + 5)]
+    all_rot_values = [0, 90, 180, -90]
+
+    perturbations = []
+
+    for x in all_x_values:
+        for z in all_z_values:
+            for rot in all_rot_values:
+                perturbation = generate_perturbation(config, x_target = x, z_target
