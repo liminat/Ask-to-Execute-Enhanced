@@ -359,4 +359,7 @@ class Diff:
         self.diff_built_config_space = diff_built_config_space
         self.diff_gold_config_space = diff_gold_config_space
 
-cla
+class PerturbedConfigAndDiff:
+    def __init__(self, perturbed_config, diff):
+        self.perturbed_config = perturbed_config
+        self.diff = diff
