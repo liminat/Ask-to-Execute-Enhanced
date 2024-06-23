@@ -3603,3 +3603,2423 @@
             "<builder> ok",
             "Display Understanding"
         ],
+        [
+            "<builder> are we goint to repeat this pattern?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> how many blocks?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is that it?",
+            "Verification Questions"
+        ]
+    ],
+    "B16-A41-C24-1522945785686": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this or above?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ]
+    ],
+    "B38-A28-C19-1522945842080": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> around here",
+            "Verification Questions"
+        ],
+        [
+            "<builder> towards me or parallel",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> how many steps?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i ean out of blocks",
+            "Status Update"
+        ],
+        [
+            "<builder> should i use a different collor?",
+            "Suggestions"
+        ],
+        [
+            "<builder> is this good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> are you sure we are going to have enough space?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like a platform?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> should i make a second pillar?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok, whats next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> this side?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> what hole? the space between the pillars?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> should the first one be there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> should i repeat that?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> yup",
+            "Others"
+        ],
+        [
+            "<builder> more pillars?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should i connect them?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should people be able to walk up the stairs?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> turrah",
+            "Others"
+        ]
+    ],
+    "B38-A28-C21-1522946417871": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> heo",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> yup",
+            "Others"
+        ],
+        [
+            "<builder> how much space do we need?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> a corner or any edge?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> so the left corner?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> right there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> this one?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> in which direction?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> should i keep the block below it?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> or on the same level?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should i connect them?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok...",
+            "Display Understanding"
+        ],
+        [
+            "<builder> pillar again?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like stairs?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok, should it look like a triangle?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> on the sides or in the middle?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> which holes?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> filling in the spaces we seperated?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i ran out of purple blocks, did i miss something?",
+            "Status Update"
+        ],
+        [
+            "<builder> was that the two in the center?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> should i do both?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok,",
+            "Display Understanding"
+        ]
+    ],
+    "B16-A41-C31-1522946488538": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> the entire h is floating?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> also color?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> okay-- sorry!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> this hopefully?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> nice! it's alright!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> nice!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ]
+    ],
+    "B38-A28-C23-1522947094778": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> heyo",
+            "Others"
+        ],
+        [
+            "<builder> should i go to a corner?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sounds like a doozy",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> you know i always start with 20 of each block, right?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> yup",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> another?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> do i repeat this with another color?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> in a line away from me horizontally or on top of the purple blocks?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> straight away from me?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> whats next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> are we repeating the pattern with orange and yellow?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> is this right?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> sorry",
+            "Others"
+        ],
+        [
+            "<builder> wait, this isn't the side i started on.",
+            "Status Update"
+        ],
+        [
+            "<builder> sorry",
+            "Others"
+        ],
+        [
+            "<builder> ok, what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> they are only one off of the ground? should everything be one block higher?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> two blocks higher for each or just one block on each?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> so it looks like an a sort of",
+            "Display Understanding"
+        ],
+        [
+            "<builder> are we repeating the structure?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok/",
+            "Display Understanding"
+        ],
+        [
+            "<builder> right or left?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> both sides or just this one?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> in the middle?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> will that repeat until we hit the ground?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> connecting them?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that",
+            "Verification Questions"
+        ],
+        [
+            "<builder> are we going to repeat what we did on the other side?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> anything else?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> cool, it looks like a bridge",
+            "Others"
+        ]
+    ],
+    "B16-A41-C36-1522947271393": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> oh! sorry",
+            "Others"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> this middle yellow row as well or just the two extra rows?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh should i have kept the green on the bottom?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> where i placed the new blue?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is the rectangle still 2 x 3?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> so the top row is 4 blocks long?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> this?",
+            "Verification Questions"
+        ]
+    ],
+    "B38-A28-C47-1522948022670": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> heyo",
+            "Others"
+        ],
+        [
+            "<builder> ooh",
+            "Display Understanding"
+        ],
+        [
+            "<builder> yup, you know i have them already, right",
+            "Greeting"
+        ],
+        [
+            "<builder> ?",
+            "Greeting"
+        ],
+        [
+            "<builder> oh, lol",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> up another level?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ohm wow",
+            "Others"
+        ]
+    ],
+    "B38-A28-C24-1522948212262": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> this looks center-ish, right?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> yyp",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool, which colors?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> nifty, anything else?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> should there be a red ring below that?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> there are two rings in the center?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> or from both rings?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> sorry, i was asking if the two blocks extend from the yellow rings",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh wait,",
+            "Verification Questions"
+        ],
+        [
+            "<builder> my bad, i misread that",
+            "Others"
+        ],
+        [
+            "<builder> any more up?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> sorry",
+            "Others"
+        ],
+        [
+            "<builder> cool, its a mug",
+            "Display Understanding"
+        ]
+    ],
+    "B38-A28-C31-1522948589166": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> heyo",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> yup",
+            "Others"
+        ],
+        [
+            "<builder> all the way in the corner",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ooh, what are we building?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> how far above the ground?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> wait... is it cwc?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> how tall is the h?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok...",
+            "Display Understanding"
+        ],
+        [
+            "<builder> 3 across, right?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should i repeat the left side?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> the o now?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> what color should i use?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> right here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is it a punched out cross?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is it a ring?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should we do a t in the same way?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> is it following the same spacing as the other letters?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> cool, and just a row on the top to finish the t?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> do you want to double check?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> the t might be oneoff",
+            "Suggestions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool, it was nice working with you",
+            "Others"
+        ],
+        [
+            "<builder> :)",
+            "Others"
+        ]
+    ],
+    "B13-A30-C3-1522967809907": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ]
+    ],
+    "B15-A27-C17-1522967873821": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> okay! i'm ready",
+            "Greeting"
+        ],
+        [
+            "<builder> what color?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like so?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool!",
+            "Others"
+        ]
+    ],
+    "B15-A27-C64-1522968427200": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> start the same structure as before?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool!",
+            "Others"
+        ]
+    ],
+    "B13-A30-C28-1522968542285": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> does it matter if i place them near a corner?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> two spaces between my current two purple blocks and the new ones i'm about to place?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> the two squares should be on top of each other?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B15-A27-C77-1522968772777": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> how long should the line be?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that, or one shorter?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> one more?",
+            "Task-level Questions"
+        ]
+    ],
+    "B13-A30-C44-1522969231926": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> that's ok.",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should i start them below where i am now, overhanging the blue structure?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> another grid of nine attached to the existing yellow grid?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i'm missing another yellow block...",
+            "Status Update"
+        ],
+        [
+            "<builder> here on the same side with the yellow blocks?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> no worries",
+            "Display Understanding"
+        ]
+    ],
+    "B15-A27-C37-1522969243496": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready!",
+            "Greeting"
+        ],
+        [
+            "<builder> like so?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> purple there or on the other side?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like so?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> sick",
+            "Others"
+        ]
+    ],
+    "B15-A27-C41-1522969861622": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> all good!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> or there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> or there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> on that yellow block?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> is the purple or blue one in the right place?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that, or above it?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> got it!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> okay!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok!",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool!",
+            "Others"
+        ]
+    ],
+    "B13-A30-C53-1522970675355": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok, no worries",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like so, with another row atop this one?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> certainly.",
+            "Display Understanding"
+        ],
+        [
+            "<builder> a vertical cube? good.",
+            "Verification Questions"
+        ],
+        [
+            "<builder> so, just build the same structure with orange blocks in between these two?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like so?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> sounds good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> i just forgot. haha, am i on the purple side right now?",
+            "Task-level Questions"
+        ]
+    ],
+    "B15-A27-C50-1522970698566": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> there, or one higher?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that but without the red?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is it another x shape?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> so in this area?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> but off the ground?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> how mans spaces off the ground?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> many*",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> starting there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> this direction, or towards the red?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> is this the base of the x?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> so there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool!",
+            "Others"
+        ]
+    ],
+    "B13-A30-C54-1522971350327": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok, tell me if this is right...",
+            "Verification Questions"
+        ],
+        [
+            "<builder> so far we've built an l, a large duck, a funky staircase, and a cube shaped house. how would you describe the end goal of this build?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> cool, that might help, maybe...haha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> diagonal staircase with this orientation?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> is it also three spaces out from the yellow blocks?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B15-A27-C52-1522971732942": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready!",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> this side or the other side?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ]
+    ],
+    "B23-A29-C3-1522766721058": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> lets first lay some bricks for a grid system.",
+            "Greeting"
+        ],
+        [
+            "<builder> how about we set this up like a cartesian plane and you just give me (x,y)",
+            "Suggestions"
+        ],
+        [
+            "<builder> purple is the origin",
+            "Status Update"
+        ],
+        [
+            "<builder> green is x",
+            "Status Update"
+        ],
+        [
+            "<builder> yellow is y",
+            "Status Update"
+        ],
+        [
+            "<builder> lets do this!",
+            "Greeting"
+        ]
+    ],
+    "B4-A20-C3-1522766869746": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> above the board or along it?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> hooray",
+            "Others"
+        ]
+    ],
+    "B4-A20-C34-1522766997770": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> 90 degrees to the first line?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> yep",
+            "Others"
+        ],
+        [
+            "<builder> three blank spaces or two blank spaces?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> i don't know where to put the red blocks",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> just hte l shape again?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> sweet",
+            "Display Understanding"
+        ]
+    ],
+    "B4-A20-C40-1522767438166": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B23-A29-C30-1522767512742": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sorry talking to aid",
+            "Others"
+        ],
+        [
+            "<builder> lets do this",
+            "Greeting"
+        ],
+        [
+            "<builder> north or east?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> red for reference",
+            "Status Update"
+        ],
+        [
+            "<builder> where?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i wil stay right over the blocks if needed. left right work for me too",
+            "Status Update"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ]
+    ],
+    "B4-A20-C41-1522767672579": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> how's that?",
+            "Verification Questions"
+        ]
+    ],
+    "B4-A20-C50-1522768148743": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> good description",
+            "Display Understanding"
+        ],
+        [
+            "<builder> how close to the purple structure?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> which yellow block?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i'll place one and you can tell me how to shift it",
+            "Suggestions"
+        ],
+        [
+            "<builder> these shapes are f-ed up",
+            "Status Update"
+        ],
+        [
+            "<builder> yah",
+            "Others"
+        ],
+        [
+            "<builder> two blocks over from what?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ran out of greens",
+            "Status Update"
+        ],
+        [
+            "<builder> ?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> looking down?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> lol the only one i don't have placed",
+            "Status Update"
+        ],
+        [
+            "<builder> phew",
+            "Others"
+        ]
+    ],
+    "B23-A29-C24-1522768231164": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready?",
+            "Greeting"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> understood",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what color handle",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B23-A29-C155-1522768671592": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> lets do this",
+            "Greeting"
+        ],
+        [
+            "<builder> don't worry about minor typos i get what youre going for",
+            "Suggestions"
+        ],
+        [
+            "<builder> how many blocks wide",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> thats alright what do i need to fix",
+            "Status Update"
+        ],
+        [
+            "<builder> this doesn't count towards our gpa :)",
+            "Others"
+        ],
+        [
+            "<builder> which line",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> hit me",
+            "Others"
+        ],
+        [
+            "<builder> which orange block",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i only have four orange blocks left",
+            "Status Update"
+        ]
+    ],
+    "B4-A20-C52-1522769444200": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> you can have two",
+            "Others"
+        ],
+        [
+            "<builder> got it. color?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> green again?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> yep",
+            "Others"
+        ],
+        [
+            "<builder> lol",
+            "Others"
+        ],
+        [
+            "<builder> good lol",
+            "Display Understanding"
+        ],
+        [
+            "<builder> :)",
+            "Others"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B4-A20-C53-1522770353289": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ]
+    ],
+    "B1-A4-C28-1522771744116": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> same place?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> the whole edge?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> towards me?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> same on the other side?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is this it?",
+            "Verification Questions"
+        ]
+    ],
+    "B1-A4-C42-1522772175511": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> anywhere is fine?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> got it",
+            "Display Understanding"
+        ],
+        [
+            "<builder> a tower?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> what do you mean?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> oh let me try",
+            "Display Understanding"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> oh is it going to be similar to the blue",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> except the opposite orange?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B1-A4-C36-1522772574085": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is here fine?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> i see",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> the same looking tower thing?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> still blue?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C37-1522773058751": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> is this good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is that 5 or an s",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> thats an s",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> is that okay?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> so longer?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> go it",
+            "Status Update"
+        ],
+        [
+            "<builder> is here good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C54-1522773776201": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> in the middle of the building area?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh wait",
+            "Others"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is this good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> to my left?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> towards the orange?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i mean yellow?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this good?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> i see",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C156-1522774417770": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> anywhere is fine?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> done",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> okay. what color?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> okay",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> still blue?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> how big?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> 7?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> are the tops aligned?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> by how much?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> wait so the 7th block was the start right?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> so that should be okay?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this okay?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> where should i stand?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> it might be easier to connect the stuctures from before?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> good",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C43-1522775315173": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> are those the shoes?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> on top?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> got it",
+            "Display Understanding"
+        ],
+        [
+            "<builder> one more?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> awesome",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C55-1522775580387": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like a c?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> extended?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> the first step is yellow right?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is it a bridge?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> above the red?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B1-A4-C45-1522776326240": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> flat?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> delete?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like before?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ]
+    ],
+    "B11-A7-C46-1522854350889": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> then yellow?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> great. what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> if red is (0,0) and orange is (1,1), what is blue?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> got it",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ywa",
+            "Others"
+        ],
+        [
+            "<builder> yes",
+            "Display Understanding"
+        ],
+        [
+            "<builder> it's one unit to my right from the diagonal",
+            "Status Update"
+        ],
+        [
+            "<builder> got it",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is that it?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool!",
+            "Others"
+        ]
+    ],
+    "B11-A7-C47-1522854931177": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> will i remove the first 3 red?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> really?",
+            "Verification Questions"
+        ]
+    ],
+    "B11-A7-C65-1522855189755": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok. one color?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this a hand?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> or head?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok. similar foot?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok. another foot on the other side?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> k",
+            "Others"
+        ],
+        [
+            "<builder> arms?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> my left?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> tricky",
+            "Others"
+        ],
+        [
+            "<builder> oh, on same level",
+            "Display Understanding"
+        ],
+        [
+            "<builder> i see",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B11-A7-C69-1522855627706": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok. so four legs/wheels?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok. sticking out one on each side?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> filled in?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> thanks",
+            "Others"
+        ],
+        [
+            "<builder> that lays flat?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> filled in?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i'll assume all polygons are filled in from now on",
+            "Status Update"
+        ],
+        [
+            "<builder> i'm out of red blocks",
+            "Status Update"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok, did i clean it up correctly?",
+            "Verification Questions"
+        ]
+    ],
+    "B11-A7-C70-1522856162986": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok. maybe back to coordinates?",
+            "Suggestions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> does the whole thing stay on the ground/",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i'll face the same way as much as possible so relative directions work well",
+            "Status Update"
+        ],
+        [
+            "<builder> that's my last yellow",
+            "Status Update"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> ok.",
+            "Display Understanding"
+        ],
+        [
+            "<builder> great",
+            "Display Understanding"
+        ],
+        [
+            "<builder> feel free to give more than one direction at a time if you're comfortable",
+            "Suggestions"
+        ],
+        [
+            "<builder> e.g. one right, then one up",
+            "Suggestions"
+        ],
+        [
+            "<builder> sounds good",
+            "Display Understanding"
+        ]
+    ],
+    "B11-A7-C157-1522857006209": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok, thanks",
+            "Others"
+        ],
+        [
+            "<builder> so all on one horizontal plane, but floating?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok.",
+            "Display Understanding"
+        ],
+        [
+            "<builder> how many cells up?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> great. should we maybe build the others on this \"floor\" next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> floating?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok, that should be it. everything's on the third level now",
+            "Status Update"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> also orange?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B11-A7-C58-1522857893533": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> south side",
+            "Status Update"
+        ]
+    ],
+    "B11-A7-C73-1522858191853": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok. is it standing up then?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> what color is each symbol?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> directly touching the x?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> how many spaces is base from =?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> on right side?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B11-A7-C64-1522858581349": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok, no worries.",
+            "Display Understanding"
+        ]
+    ],
+    "B11-A7-C77-1522858834557": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> knew what you meant",
+            "Display Understanding"
+        ]
+    ],
+    "B29-A8-C17-1522860199086": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> up?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B29-A8-C4-1522860364994": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ]
+    ],
+    "B29-A8-C8-1522860695010": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> above?",
+            "Instruction-level Questions"
+        ]
+    ],
+    "B29-A8-C74-1522860898922": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> orange?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> my right as i stand?",
