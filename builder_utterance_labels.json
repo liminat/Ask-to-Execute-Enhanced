@@ -10745,3 +10745,2386 @@
         ],
         [
             "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B35-A55-C78-1524260291965": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> suppose this is a 4 x4 shape the top right is the red block furthest to the top",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> where do you want me to place a block",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> awesome. no worries. it can get can get confusing",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> oka",
+            "Display Understanding"
+        ],
+        [
+            "<builder> okay*",
+            "Display Understanding"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok\\",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ye",
+            "Others"
+        ]
+    ],
+    "B35-A55-C55-1524260999646": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> from here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sorry about that",
+            "Others"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yeah i'm a little confused",
+            "Display Understanding"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> are we close to finishing?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sweeeeeeet",
+            "Display Understanding"
+        ]
+    ],
+    "B36-A38-C151-1524261931033": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> sounds good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> no prob",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this??",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C111-1524261941627": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> where are we starting?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> what color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ran out of green",
+            "Status Update"
+        ],
+        [
+            "<builder> am i doing that",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yay",
+            "Others"
+        ]
+    ],
+    "B36-A38-C25-1524262247384": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> no prob",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> to the right by how many spaces?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> and is it floating?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sounds good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C47-1524262518407": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> where should i star",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> start",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> above or below",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> my bad",
+            "Others"
+        ]
+    ],
+    "B36-A38-C53-1524262591934": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> ok cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> it's ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ooo it's all good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sounds good",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C31-1524262757582": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> oh my bad",
+            "Display Understanding"
+        ],
+        [
+            "<builder> haha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> just read the color",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like that",
+            "Verification Questions"
+        ],
+        [
+            "<builder> my gut is telling me it's supposed to be red",
+            "Suggestions"
+        ],
+        [
+            "<builder> yay",
+            "Others"
+        ]
+    ],
+    "B36-A38-C66-1524262976017": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> let's do it",
+            "Greeting"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> actually let me move that closer sorry",
+            "Status Update"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ooooo",
+            "Others"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> my right?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o its ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> oooo",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> it's ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C154-1524263241350": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> and we're back",
+            "Greeting"
+        ],
+        [
+            "<builder> we got this",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> how tall",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yea no problem",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is it floating",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yay",
+            "Others"
+        ]
+    ],
+    "B36-A38-C49-1524263765934": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> sounds cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> no prob",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure, what color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> o sorry",
+            "Others"
+        ],
+        [
+            "<builder> purple lol",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> great",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C123-1524264217499": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> this guy has a small head",
+            "Others"
+        ],
+        [
+            "<builder> diagonal which way",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> from my orientation",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> kk",
+            "Others"
+        ]
+    ],
+    "B36-A38-C74-1524264430406": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> let's do it",
+            "Greeting"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> o it's ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> up or down?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> got it",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here/",
+            "Verification Questions"
+        ],
+        [
+            "<builder> *?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> dw it's all good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C37-1524264875322": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> what color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> give me the mapping",
+            "Suggestions"
+        ],
+        [
+            "<builder> i can just fill it in",
+            "Suggestions"
+        ],
+        [
+            "<builder> is it red to green",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B36-A38-C59-1524265213722": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> that's fine",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> on top?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok sounds good",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> does it look the same as the first one?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> great",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C34-1524265307082": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> yay",
+            "Others"
+        ]
+    ],
+    "B36-A38-C76-1524265500678": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> that's fine",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> diagonally up or down?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o it's ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> green?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ooo ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> on top?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o wait sorry",
+            "Others"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok cool",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C27-1524265565282": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yay",
+            "Others"
+        ]
+    ],
+    "B25-A51-C2-1524266159493": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> what's the second layer?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> should i keep the extensions i added",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> kk",
+            "Others"
+        ]
+    ],
+    "B36-A38-C52-1524266430224": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what color?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> o it's ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is the 3 x 3 square in the middle of the orange ones?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> idk why i thought it was green sorry lol",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> o ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> greata",
+            "Display Understanding"
+        ],
+        [
+            "<builder> *great",
+            "Display Understanding"
+        ]
+    ],
+    "B25-A51-C35-1524266643412": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yea",
+            "Others"
+        ],
+        [
+            "<builder> is that right",
+            "Verification Questions"
+        ],
+        [
+            "<builder> yea",
+            "Others"
+        ],
+        [
+            "<builder> lol no prob",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C118-1523891056167": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello. ready",
+            "Greeting"
+        ],
+        [
+            "<builder> do i repeat the thing i did with orange but on red?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C115-1523891547014": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> ncie",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C123-1523891780457": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> where?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> not sure",
+            "Display Understanding"
+        ],
+        [
+            "<builder> this right?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> nie",
+            "Others"
+        ],
+        [
+            "<builder> c",
+            "Others"
+        ]
+    ],
+    "B44-A15-C116-1523892176572": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C117-1523892469087": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> ince",
+            "Others"
+        ]
+    ],
+    "B44-A15-C119-1523892860815": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> i'm confused",
+            "Display Understanding"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C121-1523893512968": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ecin",
+            "Others"
+        ]
+    ],
+    "B44-A15-C120-1523893772816": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ]
+    ],
+    "B44-A15-C124-1523894018669": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ],
+        [
+            "<builder> which direction do youw ant the row",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C128-1523894700099": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> ready",
+            "Greeting"
+        ]
+    ],
+    "B44-A15-C125-1523895152753": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C129-1523895411001": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B44-A15-C130-1523895772697": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B38-A42-C126-1523909944246": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> so what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok, what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok, are we repeating that on the right?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> which red block?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like a watering can?",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B38-A42-C122-1523910351534": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what should i do next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is everything ok",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this another platform, and which of the 3 should be red?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool, what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> do you have any guesses about what we are building",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> next up?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> out by one, or there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> should it be connected diagonally, or like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C3-1523910811543": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> howdy",
+            "Greeting"
+        ],
+        [
+            "<builder> ye",
+            "Others"
+        ],
+        [
+            "<builder> like this lol",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ?",
+            "Verification Questions"
+        ]
+    ],
+    "B51-A54-C135-1523911028014": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> rip me lol",
+            "Others"
+        ],
+        [
+            "<builder> nope :-(",
+            "Display Understanding"
+        ],
+        [
+            "<builder> lmao",
+            "Others"
+        ],
+        [
+            "<builder> like this",
+            "Verification Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> gorgeous lol",
+            "Others"
+        ]
+    ],
+    "B38-A42-C132-1523911175052": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok,",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what should i do first?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> purple block, or pillar?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ah, no. this is the only purple i have",
+            "Status Update"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> will this pattern of pillars with red blocks repeat?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok, what colors are the pillars?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> should i remove all of the red blocks, or are some of them in the right place?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok, are these red blocks in the right place?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> is this it?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C127-1523911449377": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> gorgeous",
+            "Others"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> lol",
+            "Others"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B38-A42-C134-1523911745273": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ah, ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> that should be nice",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ah, further away diagonally, or in a different direction?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> done, whats next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> is everything ok?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> in a v shape, or on top f them?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> just those two?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what's next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this, or on the inside?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok, should the be 3 of the greens or just one?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok, should i unite them?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> and next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok, including the orange?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is this it?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> it's like a parachute",
+            "Others"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C138-1523911921217": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> wrow",
+            "Others"
+        ],
+        [
+            "<builder> like this ?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ur good lol",
+            "Display Understanding"
+        ],
+        [
+            "<builder> which way is the bottom part going towards",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this",
+            "Verification Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> which color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C137-1523912531770": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> i dont think i have enough lol",
+            "Status Update"
+        ],
+        [
+            "<builder> or is there no fill in the square?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like just the outline",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> yeah",
+            "Others"
+        ],
+        [
+            "<builder> lol",
+            "Others"
+        ],
+        [
+            "<builder> hows this",
+            "Verification Questions"
+        ],
+        [
+            "<builder> wait what",
+            "Display Understanding"
+        ],
+        [
+            "<builder> wrow",
+            "Others"
+        ],
+        [
+            "<builder> four on the top?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what arrow",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ohhh",
+            "Others"
+        ],
+        [
+            "<builder> do you want me to replicate the right side onto the left",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> wait what happened to the block",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i dont have anymore purple blocks",
+            "Status Update"
+        ],
+        [
+            "<builder> nvm it like disappeared for a sec lmao",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ohh so no u-turns",
+            "Display Understanding"
+        ],
+        [
+            "<builder> haha",
+            "Others"
+        ],
+        [
+            "<builder> wym",
+            "Others"
+        ],
+        [
+            "<builder> do u want me to lower the top portion",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> okay so move the arrow then",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> one left?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> hows this",
+            "Verification Questions"
+        ]
+    ],
+    "B38-A42-C131-1523912688617": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hello",
+            "Greeting"
+        ],
+        [
+            "<builder> what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok, what are the table legs?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> will there be enough space?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what's next",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> right there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> next?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that, or a different direction?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> no worries",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool, what's next",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> is there more?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C136-1523913632730": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> brown ?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> i dont have brown",
+            "Status Update"
+        ],
+        [
+            "<builder> uhhhh do u mean orange then",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> gotcha",
+            "Display Understanding"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> :-)",
+            "Others"
+        ]
+    ],
+    "B38-A42-C133-1523913662360": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hwllo",
+            "Greeting"
+        ],
+        [
+            "<builder> what are we building today?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this, or taller?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> what are we doing over here",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> here?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> do they get an arch?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> there?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> or once closer?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> do these get an arch?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> like that?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C122-1523914166048": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> uhh",
+            "Others"
+        ],
+        [
+            "<builder> how big of a square",
+            "Others"
+        ],
+        [
+            "<builder> so like combine the blue and orange to make a 3x3?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ur good lmao",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ohhh",
+            "Others"
+        ],
+        [
+            "<builder> is this like a weird bird lmao",
+            "Others"
+        ],
+        [
+            "<builder> which direction? on top",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C131-1523914706199": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hey do u know how many we've done so far lol",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> nice what color",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> like this?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> like this ?",
+            "Verification Questions"
+        ],
+        [
+            "<builder> touching the purple?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> do the same thing?",
+            "Task-level Questions"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B51-A54-C133-1523915495911": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ],
+        [
+            "<builder> wait so",
+            "Display Understanding"
+        ],
+        [
+            "<builder> ohh",
+            "Others"
+        ],
+        [
+            "<builder> look at this beautiful architecture",
+            "Others"
+        ],
+        [
+            "<builder> nice",
+            "Display Understanding"
+        ]
+    ],
+    "B36-A35-C17-1523916463263": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
+        ],
+        [
+            "<builder> flat or standing?",
+            "Instruction-level Questions"
+        ],
+        [
+            "<builder> ok",
+            "Display Understanding"
+        ],
+        [
+            "<builder> cool",
+            "Display Understanding"
+        ]
+    ],
+    "B36-A35-C139-1523916627477": [
+        [
+            "<builder> mission has started.",
+            "Greeting"
+        ],
+        [
+            "<builder> hi",
+            "Greeting"
