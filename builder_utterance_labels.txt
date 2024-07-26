@@ -4488,3 +4488,1511 @@ B25-A3-C21-1523387042769
 <builder> ok	6
 <builder> do they go down diagnonally?	3
 <builder> do i fill the lenses?	3
+<builder> yay	5
+
+B25-A3-C10-1523387303809
+<builder> mission has started.	1
+<builder> ok	6
+<builder> what color blocks should i start with?	3
+<builder> i will zoom out for you	7
+<builder> should i just replicate this design	11
+<builder> oh ok	6
+<builder> ok, i'll just try and go for it	6
+<builder> let me know if i do it wrong	10
+<builder> it's a rainbow!	8
+<builder> lol	5
+
+B25-A3-C26-1523387623272
+<builder> mission has started.	1
+<builder> ok	6
+<builder> ok, do you want to do it level by level?	3
+<builder> actually your call, you're the architect	8
+<builder> just going to center it a bit	10
+<builder> my bad	4
+<builder> like that?	2
+<builder> ok	6
+<builder> and then what are the 3 diagonal pieces?	3
+<builder> like that?	2
+<builder> my bad	4
+<builder> where does the red go?	3
+<builder> yay	5
+<builder> im going to assume for aesthetic purposes they go there	7
+<builder> oh ok	6
+<builder> what's a builder without an architect???	8
+
+B25-A3-C59-1523388197708
+<builder> mission has started.	1
+<builder> ok	6
+<builder> ok, so raise everything one block?	3
+<builder> ok	6
+<builder> like there?	2
+<builder> yay	5
+<builder> same	8
+
+B3-A16-C61-1523398543923
+<builder> mission has started.	1
+<builder> hello architect	1
+<builder> what are we building today?	11
+<builder> no problem at all	6
+<builder> upright or on the ground?	3
+<builder> like that?	2
+<builder> like that?	2
+<builder> ok!	6
+<builder> orange?	3
+<builder> like that?	2
+<builder> awesome	6
+<builder> i'll let you end us so you can check the final product each time	10
+<builder> no problem, what should i do?	11
+<builder> just need to take the middle yellows out?	3
+<builder> oh i get it	6
+<builder> how's that?	2
+<builder> cool, so like that?	2
+
+B15-A38-C8-1523398549691
+<builder> mission has started.	1
+<builder> hello! i'm ready	1
+<builder> yep!	5
+<builder> okay!	6
+<builder> like that?	2
+<builder> got it!	6
+
+B15-A38-C4-1523398777481
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> got it :)	6
+<builder> like that?	2
+<builder> okay!	6
+<builder> like that, or one shorter?	2
+<builder> like that?	2
+<builder> got it!	6
+<builder> ok!	6
+
+B15-A38-C12-1523399104809
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> like that?	2
+<builder> like so?	2
+<builder> or like that?	2
+<builder> okay!	6
+<builder> here?	2
+<builder> or stacked on top of the red ones?	2
+<builder> or here?	2
+<builder> like that?	2
+<builder> got it!	6
+<builder> like that?	2
+<builder> there doesn't seem like there's enough space to mirror it	7
+<builder> is that is, or should i mirror it?	2
+<builder> that it*	6
+<builder> okay cool!	6
+
+B3-A16-C63-1523399116516
+<builder> mission has started.	1
+<builder> no problem, if it's hard to describe we can just go step by step	10
+<builder> like that?	2
+<builder> okay cool	6
+<builder> is this good so far?	2
+<builder> ah like a question mark	8
+<builder> sort of	8
+<builder> awesome!	6
+
+B3-A16-C16-1523399418222
+<builder> mission has started.	1
+<builder> sure, take your time	6
+<builder> is that ok to start?	11
+<builder> sorry, ready for more	4
+<builder> like that?	2
+<builder> no worries	6
+<builder> like that?	2
+<builder> oh ok	6
+<builder> so then like that?	2
+<builder> cool, is there more?	11
+<builder> i think i see a pattern	6
+<builder> i understand. please continue!	6
+<builder> also feel free to tell me to move if you think another perspective will help	10
+<builder> that one was tough	6
+<builder> is it complete?	2
+<builder> ok sure	6
+
+B15-A38-C1-1523399524945
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> how high?	3
+<builder> done!	6
+<builder> there?	2
+<builder> feel free to pipeline instructions if you think it'll work better!	10
+<builder> there, or should it be lower?	3
+<builder> alright!	6
+<builder> i'm guessing 5 below that?	11
+<builder> a row of 5?	11
+<builder> like that?	2
+<builder> nice!	6
+
+B15-A38-C11-1523400016265
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> interesting :o	8
+<builder> oh, ok!	6
+<builder> like that?	2
+<builder> ok!	6
+<builder> kk	5
+<builder> under it?	3
+<builder> here?	2
+<builder> like that?	2
+<builder> like that?	2
+<builder> cool	6
+
+B3-A16-C20-1523400381488
+<builder> mission has started.	1
+<builder> it's okay, is my positioning right or should i center it more?	3
+<builder> how's that?	2
+<builder> no worries!	6
+<builder> sorry	4
+<builder> whats the full color spectrum from the bottom up?	3
+<builder> ok cool! i'll get to it	6
+<builder> rainbow box	6
+<builder> ok!	6
+<builder> this one?	2
+<builder> those two?	3
+<builder> sorry	4
+<builder> how's that?	2
+<builder> okay you got this	6
+<builder> like that?	2
+<builder> there?	2
+<builder> like that?	2
+<builder> ok sorry, i thought so but wanted to wait for confirmation	2
+<builder> on to the next one!	2
+<builder> that one?	2
+<builder> is it complete?	2
+
+B15-A38-C9-1523400593183
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> easy enough	6
+<builder> got it!	6
+<builder> is there more?	11
+<builder> i don't have enough green to continue	7
+<builder> like that?	2
+<builder> cool!	5
+
+B15-A38-C61-1523400898802
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> my bad! got it now	6
+<builder> like that?	2
+
+B15-A38-C63-1523401110738
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> okay!	6
+<builder> like so?	2
+<builder> like that?	2
+
+B15-A38-C13-1523401333292
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> no worries!	6
+<builder> what to you mean by sideways?	3
+<builder> like that but purple?	3
+<builder> like that?	2
+<builder> like that?	2
+<builder> oh, crap	2
+<builder> prependicular	2
+<builder> so that?	2
+<builder> like this?	2
+<builder> the low point next to the red block, or the high one?	3
+<builder> should i shift the whole structure one tile towards me?	3
+<builder> is that what you mean?	2
+<builder> oh, wait, i think i see	6
+<builder> like that?	2
+<builder> like that?	2
+<builder> and up against the edge, or right here?	3
+<builder> ok, cool!	6
+<builder> sorry about that	4
+<builder> like that?	2
+<builder> like that, or one more?	2
+<builder> got it!	6
+<builder> okay!	6
+<builder> got it, no worries!	6
+<builder> just a pillar, or mirroring the other side?	3
+<builder> like that?	2
+<builder> those corners?	3
+<builder> okay!	6
+<builder> done!	6
+<builder> there?	2
+<builder> there, or one more?	2
+<builder> you're fine! this looks hard to describe	6
+
+B15-A38-C15-1523402487785
+<builder> mission has started.	1
+<builder> ready!	1
+<builder> got it!	6
+<builder> like that?	2
+<builder> or just one side?	2
+<builder> like that?	2
+<builder> or should it be another space over?	2
+<builder> like that?	2
+<builder> got it!	6
+<builder> got it!	6
+<builder> like that?	2
+<builder> that?	2
+<builder> cool	6
+
+B54-A1-C144-1523979171030
+<builder> mission has started.	1
+<builder> hey there	1
+<builder> horizontal or vertical?	3
+<builder> like this?	2
+<builder> which way is it ascending?	3
+<builder> left of the last block?	3
+<builder> which one?	3
+<builder> should it be diagonally touching it?	3
+
+B4-A40-C146-1523979178367
+<builder> mission has started.	1
+<builder> hello	1
+<builder> like that?	2
+<builder> do the stairs overlap at all or is it just diagonal?	3
+<builder> like is there a three stack then two stack then one?	3
+<builder> okay, nothing stacked	6
+<builder> like that	2
+<builder> got it	6
+<builder> that?	2
+<builder> sweet	6
+
+B4-A40-C151-1523979790452
+<builder> mission has started.	1
+<builder> hey	1
+<builder> orange still?	3
+<builder> to make a corner?	3
+<builder> easy	6
+
+B54-A1-C145-1523979969324
+<builder> mission has started.	1
+<builder> on top of the red one i placed?	3
+
+B4-A40-C152-1523980103101
+<builder> mission has started.	1
+<builder> hi	1
+<builder> thats okay we're experts	8
+<builder> but there are no white blocks?	3
+<builder> nice	6
+<builder> cool	6
+<builder> makes sense so far	6
+<builder> there?	2
+<builder> ah	5
+<builder> i thought you were just so disappointed you had to step away	8
+<builder> up and around?	3
+<builder> thanks lol	4
+<builder> there?	2
+<builder> great.	6
+
+B54-A1-C149-1523980449895
+<builder> mission has started.	1
+<builder> like this?	2
+<builder> on top of where the corners were or on top of the current 8 corners?	3
+<builder> so kind of like this?	2
+<builder> oh, sorry, i read that as should be...	4
+<builder> so are they diagonal to the top purples?	3
+<builder> like this?	2
+<builder> like this?	2
+<builder> a vertical t, right? if so, should the horizontal line of the t be in the same plane as the body of the flower?	3
+
+B4-A40-C110-1523981079603
+<builder> mission has started.	1
+<builder> there?	2
+<builder> how's that?	2
+<builder> in line with the red row?	3
+<builder> and starting where?	3
+<builder> whoops	5
+<builder> wait...a column?	3
+<builder> how does the row go vertical?	3
+
+B54-A1-C148-1523981264573
+<builder> mission has started.	1
+<builder> where on the table should i start?	3
+<builder> so here?	2
+<builder> so like this?	2
+<builder> and just bridge them?	3
+<builder> like this, then?	2
+<builder> diagonally?	3
+
+B4-A40-C154-1523981971049
+<builder> mission has started.	1
+<builder> np	6
+<builder> flat against the surface?	3
+<builder> is it in plane with the blue leg?	3
+<builder> or perpendicular?	3
+<builder> how's that?	2
+<builder> just the one from each?	3
+<builder> outwards toward me?	3
+<builder> oh. so the purple rows are diagonal from each other	3
+<builder> better?	2
+<builder> same plane?	3
+<builder> like that?	2
+<builder> there?	2
+<builder> damn	5
+
+B54-A1-C150-1523982123854
+<builder> mission has started.	1
+<builder> is the base solid like this?	2
+<builder> are they on the ground?	3
+
+B54-A1-C147-1523982608500
+<builder> mission has started.	1
+<builder> i'm not sure what you mean by 3-1 4	3
+<builder> is this the right idea?	2
+<builder> xd sorry that makes more sense...	4
+<builder> in the same direction or the opposite?	3
+<builder> just about to say that too xd	6
+<builder> (sorry about that my finger slipped) is that right?	2
+<builder> is it just a straight line?	3
+<builder> where do we start?	11
+<builder> could we go through it step by step?	3
+
+B4-A40-C153-1523983188276
+<builder> mission has started.	1
+<builder> centered? color?	3
+<builder> ?	2
+<builder> what do you mean along each diagonal?	3
+<builder> ah i see	6
+<builder> eh i was hoping we were done lol	8
+<builder> touching the side of the square?	3
+<builder> phew	5
+<builder> lol	5
+
+B31-A36-C111-1524004314239
+<builder> mission has started.	1
+<builder> hello	1
+<builder> okay, what color	3
+<builder> like that?	2
+<builder> like that?	2
+<builder> is this right?	2
+<builder> awesome	6
+
+B35-A34-C118-1524004322117
+<builder> mission has started.	1
+<builder> hi	1
+<builder> okay	6
+<builder> what do u mean we	8
+<builder> okay	6
+<builder> bet	5
+<builder> u can use mirror and reflect	10
+<builder> it'll be easier for me to understand	10
+<builder> this?	2
+<builder> this?	2
+<builder> okay so from my perspective	3
+<builder> where do u want me to build	3
+<builder> go block by block	10
+<builder> now what	8
+<builder> hit ctrl c	8
+
+B31-A36-C115-1524004725879
+<builder> mission has started.	1
+<builder> hello again	1
+<builder> my bad	4
+<builder> nice	6
+
+B35-A34-C120-1524004797173
+<builder> mission has started.	1
+<builder> okay	6
+<builder> hi, hi, hi, or hi	1
+<builder> give me a direction	3
+<builder> that's not specific enough	3
+<builder> u can say rotate 180 around the block	10
+<builder> it'll be easier for me	10
+
+B35-A34-C128-1524005064637
+<builder> mission has started.	1
+<builder> or to the left	2
+<builder> did u just want this?	2
+<builder> or other way?	2
+<builder> is the orange going up or down?	3
+<builder> this?	2
+<builder> del purple?	11
+<builder> nah	5
+
+B31-A36-C119-1524005147707
+<builder> mission has started.	1
+<builder> hello	1
+<builder> a new object?	3
+<builder> got it	6
+<builder> okie dokie	6
+<builder> here?	2
+<builder> okay	6
+<builder> does each one touch the ground or are they floating	3
+<builder> like that for both?	2
+<builder> no worries	6
+<builder> sorry, the program was glitching	7
+<builder> there?	2
+<builder> sweet	6
+<builder> there?	2
+<builder> no worries	6
+<builder> yep	5
+<builder> like that?	2
+<builder> nice	6
+
+B35-A34-C129-1524005724049
+<builder> mission has started.	1
+<builder> what is the shape	11
+<builder> what colors are usesd	3
+<builder> are the rings 3x3 or 5x5?	3
+<builder> is this the reference u want me to keep	3
+<builder> okay	6
+<builder> that?	2
+<builder> this?	2
+<builder> is it a reflection?	3
+<builder> okay	6
+<builder> is it perpindicular to these 2 rings	3
+<builder> so it goes inbetween the holes?	3
+<builder> that?	2
+<builder> oops	5
+<builder> chegg*	8
+
+B31-A36-C117-1524006144961
+<builder> mission has started.	1
+<builder> hey	1
+<builder> noice	5
+<builder> there?	2
+<builder> yep	5
+<builder> its all good	6
+<builder> like that for all three?	2
+<builder> like that?	2
+<builder> do they go on the corners?	3
+<builder> like that?	2
+<builder> like that diagonal?	2
+<builder> or across like that	2
+<builder> lol do i need to delete anything from this configuration?	3
+<builder> yes	6
+<builder> okay	6
+<builder> both side?	3
+<builder> the green one is still good	7
+<builder> yes, do i need to add another	3
+<builder> perfect	6
+
+B35-A34-C124-1524006274673
+<builder> mission has started.	1
+<builder> okay	6
+<builder> ?	3
+<builder> what	3
+<builder> ohhh	5
+<builder> ok	6
+<builder> okay	6
+<builder> same size?	3
+<builder> this?	2
+<builder> ok	6
+<builder> ok	6
+<builder> this?	2
+
+B35-A34-C125-1524006909862
+<builder> mission has started.	1
+<builder> this is #4 right	8
+<builder> ok	6
+<builder> okay	6
+<builder> ok	6
+<builder> its all vertical right	3
+<builder> here?	2
+<builder> this	2
+<builder> and now reflect	11
+<builder> we done	6
+
+B31-A36-C123-1524007209793
+<builder> mission has started.	1
+<builder> hey	1
+<builder> lol cool	6
+<builder> red?	3
+<builder> got it	6
+<builder> what does it look like?	3
+<builder> got it	6
+<builder> lol i'm down	8
+<builder> interesting	8
+<builder> thanks	4
+
+B35-A34-C115-1524007397413
+<builder> mission has started.	1
+<builder> ctrl c	6
+<builder> continue	11
+<builder> ok	6
+<builder> same deisgn	11
+<builder> swwwwweeeeetttt	5
+
+B35-A34-C117-1524007776415
+<builder> mission has started.	1
+<builder> ok	6
+<builder> this	2
+<builder> the terget logo	6
+<builder> that it?	2
+<builder> ok	6
+<builder> is this level 5	3
+<builder> so diagonal from me	3
+<builder> sweet	6
+<builder> looks like the top of strawberry	8
+
+B31-A36-C116-1524007915648
+<builder> mission has started.	1
+<builder> hey	1
+<builder> got it	6
+<builder> there?	2
+<builder> you too	8
+
+B35-A34-C116-1524008373661
+<builder> mission has started.	1
+<builder> okay we ready	1
+<builder> okay	6
+<builder> okay	6
+<builder> inter?	3
+<builder> sweet	6
+
+B31-A36-C121-1524008543272
+<builder> mission has started.	1
+<builder> hey	1
+<builder> nice, lets do it	1
+<builder> nice	6
+<builder> got it	6
+<builder> what color	3
+<builder> looks like a giraffe	8
+<builder> nice	6
+<builder> you too	8
+
+B35-A34-C119-1524008747817
+<builder> mission has started.	1
+<builder> hi	1
+<builder> okay	6
+<builder> okay	6
+<builder> this	2
+<builder> yeah	5
+<builder> they're purple	8
+
+B31-A36-C130-1524009032445
+<builder> mission has started.	1
+<builder> hey	1
+<builder> there?	2
+<builder> yep	5
+<builder> you too	8
+
+B16-A26-C120-1524151897965
+<builder> mission has started.	1
+<builder> good morning!	1
+<builder> great, sounds good	6
+<builder> no problem!	6
+<builder> also yellow?	3
+<builder> a cross!	6
+
+B53-A4-C122-1524152034663
+<builder> mission has started.	1
+<builder> hello	1
+<builder> yes i am!	1
+<builder> excellent	6
+<builder> same color?	3
+<builder> okay	6
+<builder> like this?	2
+<builder> is this the right place?	2
+<builder> copy that	6
+<builder> should they be right next to the wings?	3
+<builder> here?	2
+<builder> cool	6
+
+B16-A26-C121-1524152237357
+<builder> mission has started.	1
+<builder> best animal, sounds great!	8
+<builder> diagonal or not?	3
+
+B53-A4-C127-1524152409467
+<builder> mission has started.	1
+<builder> alright	6
+<builder> top corner of the yellow rectangle?	3
+<builder> i'm guessing here then?	2
+<builder> thanks	4
+
+B16-A26-C82-1524152505823
+<builder> mission has started.	1
+<builder> nice!	6
+<builder> sorry about that!	4
+
+B53-A4-C92-1524152696545
+<builder> mission has started.	1
+<builder> hello	1
+<builder> gotcha	6
+<builder> to confirm: it's a column of three blocks whose bottom block is diagonal from the one green block?	3
+<builder> that was easy	6
+
+B16-A26-C75-1524152904572
+<builder> mission has started.	1
+
+B53-A4-C88-1524152926999
+<builder> mission has started.	1
+<builder> i'm ready	1
+<builder> one block up?	3
+<builder> one what? column?	3
+<builder> okay i think i understand, let me try	6
+<builder> alright, i'll fix it	6
+<builder> here, yes?	2
+<builder> just kidding, here	8
+<builder> here?	2
+<builder> two blank spaces	7
+<builder> birds flying during sunset	8
+<builder> no they're birds	8
+
+B16-A26-C83-1524153180717
+<builder> mission has started.	1
+<builder> yep!	5
+<builder> oh okay!	6
+
+B53-A4-C87-1524153344029
+<builder> mission has started.	1
+<builder> along the edge?	3
+<builder> nice	6
+
+B16-A26-C86-1524153493389
+<builder> mission has started.	1
+<builder> cool!	5
+<builder> in the same layer as the rest of the structure?	3
+<builder> what color?	3
+<builder> unless i am reading your directions badly, it doesnt seem like we have enough orange to build this?	7
+<builder> if we are removing parts of this, we can substitute some for purple	10
+<builder> alright!	6
+<builder> alright!	6
+<builder> okay i see!	6
+<builder> there we go!	7
+
+B53-A4-C90-1524153553448
+<builder> mission has started.	1
+<builder> yo	5
+<builder> how tall?	3
+<builder> so here?	2
+<builder> also yellow?	3
+<builder> alright, gimme a moment	6
+<builder> thanks bud	4
+<builder> green for the step, purple for the flower?	3
+<builder> stem i mean	3
+<builder> here?	2
+<builder> so then here	3
+<builder> flower facing the same way?	3
+<builder> excellent	6
+
+B53-A4-C120-1524154056804
+<builder> mission has started.	1
+<builder> hello	1
+<builder> you should have been more specific	3
+
+B53-A4-C121-1524154262139
+<builder> mission has started.	1
+<builder> like this?	2
+<builder> "giraffe"	8
+
+B53-A4-C113-1524154533854
+<builder> mission has started.	1
+<builder> hey	1
+<builder> where does the 6 start?	3
+<builder> is it directly adjacent?	3
+<builder> ah okay, i see	6
+<builder> anything else?	11
+<builder> here?	2
+<builder> behind the 8 i'm assuming?	3
+<builder> yes	6
+
+B16-A26-C135-1524154538127
+<builder> mission has started.	1
+<builder> hi again!	1
+<builder> alright!	6
+<builder> this?	2
+
+B53-A4-C100-1524154965718
+<builder> mission has started.	1
+<builder> along the edge or towards the middle?	3
+<builder> okay	6
+<builder> so here	2
+<builder> will there be another ring after the yellow one?	3
+<builder> what are their colors?	3
+<builder> well that's too bad	6
+<builder> no you're great	8
+
+B16-A26-C94-1524155062504
+<builder> mission has started.	1
+<builder> welcome back!	1
+<builder> like this?	2
+
+B53-A4-C99-1524155387021
+<builder> mission has started.	1
+<builder> where does it start?	3
+<builder> does the row of 5 include the block that's already there?	3
+<builder> do you mean another block on top of the middle one?	3
+<builder> ah okay	6
+<builder> alright, take your time	6
+<builder> here	2
+<builder> am i building the same key as before?	3
+<builder> how so?	2
+<builder> i see what you're saying	6
+
+B16-A26-C95-1524155482707
+<builder> mission has started.	1
+<builder> whoops	5
+<builder> oh yes, sorry	4
+
+B16-A26-C98-1524155903266
+<builder> mission has started.	1
+<builder> okay!	6
+<builder> here?	2
+<builder> no problem!	6
+<builder> here?	2
+<builder> true! no problem though	6
+
+B53-A4-C112-1524155943365
+<builder> mission has started.	1
+<builder> hi	1
+<builder> in the middle of the edge?	3
+<builder> now what?	11
+<builder> oops	5
+<builder> it's pretty	8
+
+B53-A4-C144-1524156402645
+<builder> mission has started.	1
+<builder> along the edge?	3
+<builder> p	5
+<builder> so here first?	2
+<builder> so this	2
+<builder> yeah, was confused about that	6
+<builder> here?	2
+
+B16-A26-C139-1524156601735
+<builder> mission has started.	1
+<builder> haha, nice!	6
+<builder> this?	2
+<builder> sorry, i am a bit confused	4
+
+B16-A26-C145-1524156923760
+<builder> mission has started.	1
+<builder> here?	2
+<builder> right edge?	3
+<builder> totally fine!	6
+<builder> yeah sorry! but confusing	6
+<builder> bit*	6
+<builder> oh okay	6
+
+B27-A1-C124-1524160867896
+<builder> mission has started.	1
+<builder> hey	1
+<builder> does it matter where	3
+<builder> is it going out horizontally?	3
+<builder> towards me?	3
+<builder> got it	6
+
+B27-A1-C130-1524161803977
+<builder> mission has started.	1
+<builder> wall or flat?	3
+<builder> should i move it towards the middle more?	3
+<builder> like that?	2
+<builder> still blue?	3
+
+B27-A1-C123-1524162508090
+<builder> mission has started.	1
+<builder> should it be towards one side?	3
+<builder> is it seperated by a space	3
+<builder> like that?	2
+
+B27-A1-C125-1524163043611
+<builder> mission has started.	1
+<builder> got it	6
+<builder> it looks like a face	8
+
+B27-A1-C128-1524163632822
+<builder> mission has started.	1
+<builder> how close to the original two?	3
+<builder> i think i got it	6
+<builder> raised?	3
+<builder> is that the leftmost block	3
+<builder> this direction?	3
+<builder> gotcha	6
+<builder> is this one touching the ground?	3
+<builder> ?	2
+
+B27-A1-C129-1524164519301
+<builder> mission has started.	1
+<builder> how many steps	3
+
+B27-A1-C131-1524165101109
+<builder> mission has started.	1
+<builder> is it floating?	3
+<builder> this corner?	3
+<builder> off of the blue?	3
+
+B36-A25-C146-1524175477308
+<builder> mission has started.	1
+<builder> ok	6
+<builder> my left?	3
+<builder> like this??	2
+<builder> horizontal?	3
+<builder> ok	6
+<builder> to the right?	3
+<builder> ok	6
+<builder> like this?	2
+<builder> ok	6
+<builder> cool	6
+
+B44-A42-C151-1524175485455
+<builder> mission has started.	1
+<builder> hello. ready	1
+<builder> sorry some technical difficulties	4
+<builder> what?	6
+<builder> ok got it	6
+<builder> if its ok, could you	10
+<builder> give me shorter, less wordy instructions	10
+
+B36-A25-C147-1524175913340
+<builder> mission has started.	1
+<builder> hi	1
+<builder> nice	6
+<builder> floating?	3
+<builder> o nvm	6
+<builder> what color	3
+<builder> here?	2
+<builder> what color	3
+<builder> ok	6
+<builder> like this?	2
+<builder> ok	6
+<builder> nice	6
+<builder> here?	2
+<builder> ok	6
+<builder> ooooo	5
+<builder> here?	2
+<builder> ok	6
+<builder> ok	6
+<builder> cool	6
+
+B44-A42-C141-1524175959273
+<builder> mission has started.	1
+<builder> ready	1
+<builder> there?	2
+<builder> mirror both blue blocks on the other side?	3
+<builder> ok	6
+<builder> that would be 1 up, right, toward, not away from me	7
+<builder> do you want me to mirror that block too?	3
+<builder> that was a bit unclear	3
+<builder> like if you could say behidn which yellow block	10
+<builder> like the top most yellow block in the main column	10
+<builder> nice	6
+
+B36-A25-C138-1524176612571
+<builder> mission has started.	1
+<builder> hi	1
+<builder> here?	2
+<builder> k lol	5
+<builder> ok	6
+<builder> youre fine	8
+<builder> ike this?	2	like this?
+<builder> *like	2
+<builder> ok	6
+
+B44-A42-C140-1524176978338
+<builder> mission has started.	1
+<builder> ready	1
+<builder> which orange row	3
+<builder> you forgot to specify that it was between the yellows	10
+<builder> but thats ok	10
+
+B36-A25-C110-1524177194497
+<builder> mission has started.	1
+<builder> hi	1
+<builder> green?	3
+
+B36-A25-C137-1524177508983
+<builder> mission has started.	1
+<builder> hi	1
+<builder> here?	2
+<builder> what color	3
+<builder> like this?	2
+<builder> here?	2
+<builder> ok	6
+<builder> here?	2
+
+B44-A42-C143-1524177733041
+<builder> mission has started.	1
+<builder> ready	1
+<builder> is the flower symetrical 4 way?	3
+<builder> because if it is, you could just tell me to build 1/4th of it and mirror it 4 ways	10
+<builder> this good?	2
+
+B36-A25-C133-1524178243904
+<builder> mission has started.	1
+<builder> here?	2
+<builder> diagonally up or down?	3
+<builder> o ok sorry	4
+<builder> o uuh	5
+<builder> ooooo	5
+<builder> like this?	2
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+<builder> like this?	2
+<builder> here?	2
+<builder> the ones sticking out?	3
+<builder> ok	6
+
+B44-A42-C152-1524178385730
+<builder> mission has started.	1
+<builder> ready	1
+<builder> looks crazy	8
+
+B44-A42-C142-1524179027697
+<builder> mission has started.	1
+<builder> ready	1
+<builder> nixw	6	nice
+<builder> nice	6
+
+B36-A25-C149-1524179117172
+<builder> mission has started.	1
+<builder> hi	1
+<builder> ok	6
+<builder> k	5
+<builder> ok	6
+<builder> like this?	2
+<builder> o ok	6
+<builder> ok	6
+
+B44-A42-C153-1524179624799
+<builder> mission has started.	1
+<builder> ready	1
+<builder> nice	6
+<builder> good job	8
+
+B36-A25-C148-1524179747169
+<builder> mission has started.	1
+<builder> hi	1
+<builder> diagonal or not?	3
+<builder> k	5
+<builder> ok	6
+<builder> like that?	2
+<builder> here?	2
+<builder> ok	6
+<builder> ooo ok sorry	4
+<builder> ok	6
+
+B31-A41-C17-1523029046594
+<builder> mission has started.	1
+<builder> hello	1
+<builder> like this?	2
+
+B31-A41-C25-1523029167770
+<builder> mission has started.	1
+<builder> like this?	2
+<builder> purple blocks?	3
+<builder> like this?	2
+
+B31-A41-C67-1523029699567
+<builder> mission has started.	1
+<builder> what color?	3
+
+B31-A41-C49-1523030061094
+<builder> mission has started.	1
+<builder> a loop up or down?	3
+<builder> like that?	2
+<builder> this way?	2
+<builder> this side?	2
+<builder> this side?	2
+
+B31-A41-C56-1523030750111
+<builder> mission has started.	1
+
+B31-A41-C68-1523031374960
+<builder> mission has started.	1
+<builder> is this the right height?	3
+<builder> is that right?	2
+<builder> there?	2
+<builder> is this right?	2
+
+B31-A41-C72-1523032015687
+<builder> mission has started.	1
+<builder> does it matter which side?	3
+<builder> like this?	2
+<builder> like that?	2
+<builder> here?	2
+<builder> is that right?	2
+<builder> here?	2
+<builder> like that?	2
+
+B31-A41-C30-1523032952253
+<builder> mission has started.	1
+
+B31-A41-C34-1523033220178
+<builder> mission has started.	1
+<builder> okay	6
+
+B1-A44-C17-1523034060175
+<builder> mission has started.	1
+<builder> hello	1
+<builder> what are we building?	11
+<builder> flat?	3
+<builder> ok	6
+<builder> cool	6
+
+B1-A44-C25-1523034179049
+<builder> mission has started.	1
+<builder> hello	1
+<builder> anywhere?	3
+<builder> ok so looks like a d?	3
+<builder> here?	2
+<builder> where?	3
+<builder> here?	2
+<builder> so its a longer tail in the d?	3
+<builder> oh is the purple floating?	3
+<builder> on the opposite side?	3
+<builder> here?	2
+<builder> good	6
+
+B1-A44-C67-1523034590730
+<builder> mission has started.	1
+<builder> hello	1
+<builder> is this ok?	2
+<builder> inverse l?	11
+<builder> like this?	2
+<builder> oh in the intersection..	6
+<builder> here?	2
+<builder> like this?	2
+<builder> here?	2
+<builder> ok	6
+<builder> two towers?	3
+<builder> of four blocks?	12
+<builder> like this?	2
+<builder> which side?	3
+<builder> oh so 4x4?	3
+<builder> here?	2
+<builder> here?	2
+<builder> ok	6
+<builder> no worries	6
+<builder> good job	8
+
+B1-A44-C13-1523035422739
+<builder> mission has started.	1
+<builder> hello	1
+<builder> ok	6
+<builder> is it flat?	3
+<builder> oh ok	6
+<builder> like this?	2
+<builder> ok	6
+<builder> okay	6
+<builder> like this?	2
+<builder> ok	6
+<builder> purp = purple	3
+<builder> ok	6
+<builder> good job	8
+
+B1-A44-C16-1523036004645
+<builder> mission has started.	1
+<builder> hello	1
+<builder> ok	6
+<builder> here?	2
+<builder> is the yellow stairs continuing?	3
+<builder> ok	6
+<builder> here?	2
+<builder> good job	8
+
+B1-A44-C20-1523036364610
+<builder> mission has started.	1
+<builder> hello	1
+<builder> got it	6
+<builder> anywhere?	3
+<builder> ok	6
+<builder> it might be easier to describe all one color?	3
+<builder> then build from there?	2
+<builder> back meaning away?	3
+<builder> or towards me?	3
+<builder> away?	12
+<builder> ok	6
+<builder> here?	2
+<builder> here?	2
+<builder> here?	2
+<builder> diagonal step?	3
+<builder> left step?	2
+<builder> just to confirm	2
+
+B1-A44-C48-1523037288443
+<builder> mission has started.	1
+<builder> hello	1
+<builder> okay	6
+<builder> is it all 2d?	3
+<builder> got it	6
+<builder> like this?	2
+<builder> the one on the bottom?	3
+<builder> ok	6
+<builder> three blocks similar to the red?	3
+<builder> this is the edge of the building area...	7
+<builder> where is the front?	3
+<builder> the arm?	3
+<builder> here?	2
+<builder> here?	2
+<builder> here?	2
+<builder> like this?	2
+<builder> good job	8
+
+B1-A44-C40-1523038017799
+<builder> mission has started.	1
+<builder> hello	1
+
+B1-A44-C49-1523038152406
+<builder> mission has started.	1
+<builder> hello	1
+<builder> all red?	3
+<builder> like this?	2
+<builder> here?	2
+<builder> like this?	2
+<builder> ok	6
+<builder> uppercase right?	3
+<builder> how much space?	3
+<builder> towards a?	3
+<builder> cool	6
+
+B1-A44-C56-1523038570819
+<builder> mission has started.	1
+<builder> hello	1
+<builder> its symmetric?	3
+<builder> is this correct?	2
+<builder> everything else?	11
+<builder> oh so its the center?	3
+<builder> like this?	2
+<builder> good job	8
+
+B1-A44-C46-1523039009498
+<builder> mission has started.	1
+<builder> hello	1
+<builder> its all 2d right?	3
+<builder> here?	2
+<builder> here?	2
+<builder> here?	2
+<builder> at the corner?	3
+<builder> good job	8
+
+B1-A44-C58-1523039254701
+<builder> mission has started.	1
+<builder> hello	1
+<builder> all flat?	3
+<builder> here?	2
+<builder> like this?	2
+<builder> step?	3
+<builder> good job	8
+
+B24-A25-C3-1523052747464
+<builder> mission has started.	1
+<builder> yo	5
+<builder> lol	5
+<builder> study lmao	6
+<builder> i got my first job from minecraft	8
+<builder> at a library	8
+<builder> i was like "i know how to code"	8
+<builder> and they werent interested	8
+<builder> till i said i could play minecraft	8
+
+B24-A25-C25-1523053026688
+<builder> mission has started.	1
+<builder> kool	5
+<builder> is it two music notes?	8
+<builder> like that?	2
+<builder> kool	5
+
+B40-A14-C3-1523053120928
+<builder> mission has started.	1
+<builder> hi	1
+<builder> anywhere on the grid?	3
+
+B40-A14-C45-1523053306494
+<builder> mission has started.	1
+<builder> hi	1
+<builder> anywhere?	3
+<builder> sure	6
+<builder> exact center?	3
+<builder> or roughly?	3
+<builder> cool	6
+<builder> like this?	2
+<builder> here?	2
+<builder> cool	6
+<builder> done?	2
+<builder> :)	5
+
+B24-A25-C43-1523053331176
+<builder> mission has started.	1
+<builder> aright	6
+<builder> k	5
+<builder> what corner of the structure are we starting on	3
+
+B40-A14-C67-1523053894335
+<builder> mission has started.	1
+<builder> sounds good	6
+<builder> so a stack of yellow blocks?	3
+<builder> cool	6
+<builder> on top of which block?	3
+<builder> ah i see what you mean	6
+<builder> i thought by stack you meant vertically stack	6
+<builder> is this what you had in mind?	2
+<builder> ah!	5
+<builder> gotcha	6
+<builder> just curious...what are we building?	8
+<builder> ah my bad	1
+<builder> lol	5
+<builder> okay	6
+<builder> gg	5
+
+B24-A25-C13-1523053997650
+<builder> mission has started.	1
+<builder> lit	5
+<builder> like that?	2
+<builder> kool	5
+<builder> k	5
+<builder> dope	5
+
+B40-A14-C68-1523054593793
+<builder> mission has started.	1
+<builder> hi	1
+<builder> np	6
+<builder> again below it right?	3
+<builder> you could've said a plus sign ;)	10
+<builder> but no problem	6
+<builder> ah i see!	6
+<builder> true	6
+<builder> like this?	2
+<builder> another square around this one?	11
+<builder> cool	6
+<builder> center of the plus on top of the last orange block i placed?	3
+<builder> ah got it	6
+<builder> like this?	2
+<builder> or is the plus bigger?	3
+<builder> which orange block?	3
+<builder> like this?	2
+<builder> gotcha	6
+<builder> ya that's why i was a bit confused	6
+<builder> np	6
+<builder> ya not sure which place you mean	3
+<builder> right orange block of the pus sign?	3	right orange block of the plus sign?
+<builder> plus*	3
+<builder> you mean here?	2
+<builder> oh this plus sign!!	6
+<builder> i thought the green one!	6
+<builder> lol	5
+<builder> forgot there were two plus signs	6
+<builder> ya that's why i didn't understand when you said base of the structure	6
+<builder> here?	2
+<builder> haha	5
+<builder> np	6
+<builder> like this?	2
+<builder> not sure if that's right	2
+<builder> here?	2
+<builder> so this side...	2
+<builder> now two squares above which block exactly?	3
+<builder> here?	2
+<builder> phew :)	5
+<builder> haha	5
+<builder> cool	6
+
+B24-A25-C16-1523054900788
+<builder> mission has started.	1
+
+B24-A25-C20-1523055406013
+<builder> mission has started.	1
+<builder> yeah	5
+<builder> what corner are we starting at?	3
+<builder> yeah	5
+<builder> lol	5
+<builder> forward = going farther from me?	3
+<builder> k	5
+<builder> gotchu	6
+<builder> my b	4
+<builder> aright	6
+<builder> kk	5
+<builder> sweet	6
+
+B24-A25-C48-1523056660291
+<builder> mission has started.	1
+<builder> aright	6
+<builder> kool	5
+
+B44-A20-C39-1523283069379
+<builder> mission has started.	1
+<builder> hello	1
+<builder> is this good?	2
+<builder> how about now?	2
+<builder> nice!	6
+
+B44-A20-C51-1523283403369
+<builder> mission has started.	1
+<builder> ready when you are	1
+<builder> here?	2
+<builder> lol my bad	4
+
+B44-A20-C26-1523283703891
+<builder> mission has started.	1
+<builder> this good?	2
+<builder> alright	6
+<builder> looks nice	6
+
+B44-A20-C27-1523284130013
+<builder> mission has started.	1
+<builder> do you want me to put one down?	3
+<builder> which direction?	3
+
+B44-A20-C29-1523284643015
+<builder> mission has started.	1
+
+B44-A20-C35-1523285026757
+<builder> mission has started.	1
+<builder> nice	6
+
+B44-A20-C57-1523285552691
+<builder> mission has started.	1
+<builder> 4	5
+<builder> do we have enough space? i thought the blue blocks would be the closest to the corner	3
+<builder> k	5
+
+B44-A20-C55-1523285912364
+<builder> mission has started.	1
+<builder> does the orange shape look similar to the red one?	3
+<builder> ok nevermind lets just go from where i am sorry	6
+<builder> nah it was me	8
+
+B44-A20-C65-1523286637662
+<builder> mission has started.	1
+<builder> done?	2
+
+B44-A20-C66-1523287015423
+<builder> mission has started.	1
+<builder> here?	2
+<builder> woo	5
+
+B37-A46-C3-1523304627789
+<builder> mission has started.	1
+<builder> hi!	1
+<builder> next to each other?	3
+<builder> ok	6
+<builder> like that?	2
+
+B42-A12-C17-1523304629511
+<builder> mission has started.	1
+<builder> what should i do?	11
+<builder> how big and what color	3
+<builder> how many across and how many tall	3
+<builder> that good	6
+<builder> thats all?	2
+
+B37-A46-C59-1523304919107
+<builder> mission has started.	1
+<builder> ok	6
+<builder> are there 3 empty squares between the towers or 2 empty squares?	3
+<builder> ok	6
+<builder> like that?	2
+<builder> like that?	2
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+
+B42-A12-C63-1523304955372
+<builder> mission has started.	1
+<builder> what should i do?	11
+<builder> good	6
+<builder> what color	3
+<builder> like that?	2
+
+B42-A12-C39-1523305086735
+<builder> mission has started.	1
+<builder> standing by	1
+<builder> for instructions	1
+<builder> ok	6
+<builder> how long is each side of the square	3
+<builder> that good?	2
+<builder> like that?	2
+<builder> that good?	2
+<builder> like that or othwr way?	2
+<builder> ok	6
+<builder> ok	6
+<builder> is that one good?	2
+
+B37-A46-C61-1523305429948
+<builder> mission has started.	1
+<builder> ok	6
+<builder> ok	6
+<builder> like that?	2
+<builder> in a line down the middle of the square?	3
+<builder> like that?	2
+<builder> ok	6
+
+B42-A12-C79-1523305466875
+<builder> mission has started.	1
+<builder> ready to go	1
+<builder> good	6
+<builder> on top?	3
+<builder> and what color?	3
+<builder> good?	2
+<builder> like so?	2
+<builder> ok	6
+<builder> you mean the other orange one?	3
+<builder> what configuration just a line?	3
+<builder> that good?	2
+
+B37-A46-C33-1523305851116
+<builder> mission has started.	1
+<builder> there?	2
+<builder> by up do you mean vertically?	3
+<builder> ok	6
+<builder> ok	6
+<builder> a line going which direction? up? sideways?	3
+<builder> ok	6
+<builder> parallel to the current green line?	3
+<builder> like that?	2
+<builder> ok	6
+<builder> i'm not sure what you mean	3
+<builder> to the left of that block, or towards me?	3
+<builder> oh i see	6
+<builder> ok	6
+<builder> ok	6
+<builder> like that?	2
+<builder> ok	6
+
+B37-A46-C60-1523307045598
+<builder> mission has started.	1
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+<builder> in front of me like on top of the blue block?	3
+<builder> i'm facing the blue block	7
+<builder> should i turn around?	3
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+<builder> ok, like that?	2
+
+B42-A12-C27-1523307231495
+<builder> mission has started.	1
+<builder> ok	6
+<builder> what now?	11
+<builder> from the green and yellow ones?	3
+<builder> like that?	2
+<builder> like that?	2
+<builder> is that green bar supposed to be 5 long?	3
+<builder> or 4?	3
+<builder> like that?	2
+<builder> where?	3
+
+B42-A12-C29-1523307822416
+<builder> mission has started.	1
+
+B42-A12-C59-1523308234826
+<builder> mission has started.	1
+<builder> ready to go	1
+<builder> 3 red 1 orange?	3
+
+B37-A46-C62-1523308403242
+<builder> mission has started.	1
+<builder> ok	6
+<builder> making 2 towers?	3
+<builder> ok	6
+<builder> ok	6
+<builder> ok	6
+<builder> in the same configuration?	3
+<builder> like that?	2
+<builder> on top of the red blocks?	3
+<builder> like that?	2
+
+B42-A12-C33-1523308506692
+<builder> mission has started.	1
+<builder> ready to go	1
+<builder> thats at the edge of the build space	7
+
+B42-A12-C60-1523308886870
+<builder> mission has started.	1
+<builder> ok	6
